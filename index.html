@@ -1,0 +1,4128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>$AMERICA — America Is Back</title>
+<meta name="description" content="AMERICA IS BACK. $AMERICA on Solana. Signed, sealed, and unstoppable. The Hat Stays On." />
+
+<!-- Favicon stack -->
+<link rel="icon" href="/Assets/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/Assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/Assets/favicon-192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/Assets/apple-touch-icon.png" />
+<link rel="mask-icon" href="/Assets/logo.png" color="#d40821" />
+
+<!-- Canonical + locale -->
+<link rel="canonical" href="/" />
+
+<!-- Open Graph (Facebook, iMessage, Discord, Telegram, Slack) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="$AMERICA" />
+<meta property="og:title" content="$AMERICA — America Is Back" />
+<meta property="og:description" content="Signed, sealed, and unstoppable. The greatest comeback in history is underway. $AMERICA on Solana. The Hat Stays On." />
+<meta property="og:url" content="/" />
+<meta property="og:image" content="/Assets/social-card.jpg" />
+<meta property="og:image:secure_url" content="/Assets/social-card.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="AMERICA IS BACK — $AMERICA on Solana" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@AMERICAISBACK_1" />
+<meta name="twitter:creator" content="@AMERICAISBACK_1" />
+<meta name="twitter:title" content="$AMERICA — America Is Back" />
+<meta name="twitter:description" content="Signed, sealed, and unstoppable. The greatest comeback in history is underway." />
+<meta name="twitter:image" content="/Assets/social-card.jpg" />
+<meta name="twitter:image:alt" content="AMERICA IS BACK — $AMERICA on Solana" />
+
+<meta name="theme-color" content="#0a1f4a" />
+<meta name="color-scheme" content="dark" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Big+Shoulders+Stencil+Display:wght@700;800;900&family=Alfa+Slab+One&family=Work+Sans:ital,wght@0,400;0,600;0,700;1,500&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+<style>
+  /* ====================================================================
+     PALETTE — three-color riso + gold accent + navy structural color
+     ==================================================================== */
+  :root{
+    --paper:#f3e9d2;
+    --paper-warm:#ebdfbf;
+    --ink:#0c0c0c;
+    --red:#d40821;
+    --red-deep:#9a0b18;
+    --navy:#0a1f4a;
+    --navy-deep:#06143a;
+    --white:#fafafa;
+    --gold:#ffc940;
+    --gold-warm:#e2a92a;
+    --warning:#ffe44d;
+    --cyan:#1a4f8b;       /* legacy misregistration ghost */
+    --shadow:rgba(12,12,12,.18);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);max-width:100vw;overflow-x:clip;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{
+    font-family:"Work Sans","Inter",system-ui,sans-serif;
+    font-weight:500;
+    line-height:1.5;
+    overflow-x:hidden;
+    background-color:var(--paper);
+    background-image:
+      radial-gradient(circle at 20% 15%, rgba(154,11,24,.06), transparent 38%),
+      radial-gradient(circle at 80% 75%, rgba(10,31,74,.06), transparent 42%),
+      radial-gradient(circle at 50% 50%, rgba(12,12,12,.05), transparent 60%),
+      repeating-linear-gradient(0deg,transparent 0 2px, rgba(12,12,12,.014) 2px 3px),
+      repeating-linear-gradient(90deg,transparent 0 2px, rgba(12,12,12,.014) 2px 3px);
+  }
+
+  /* Custom desktop cursor — tri-color star dot */
+  @media (hover: hover) and (pointer: fine){
+    body.has-custom-cursor, body.has-custom-cursor *{cursor:none !important;}
+    .custom-cursor{
+      position:fixed;top:0;left:0;
+      width:18px;height:18px;border-radius:50%;
+      background:radial-gradient(circle at 30% 30%, var(--white) 0 30%, var(--red) 30% 60%, var(--navy) 60% 100%);
+      border:2px solid var(--ink);
+      pointer-events:none;
+      z-index:99999;
+      transform:translate(-50%,-50%);
+      transition:width .18s ease, height .18s ease, background .18s ease, box-shadow .18s ease;
+      will-change:transform,width,height;
+      mix-blend-mode:normal;
+      box-shadow:0 0 0 0 rgba(212,8,33,0);
+    }
+    .custom-cursor.hover{
+      width:42px;height:42px;
+      background:radial-gradient(circle at 30% 30%, var(--gold) 0 35%, var(--red) 35% 70%, var(--navy) 70% 100%);
+      box-shadow:0 0 0 6px rgba(255,201,64,.18);
+    }
+    .custom-cursor.click{transform:translate(-50%,-50%) scale(.7);}
+  }
+
+  /* GLOBAL GRAIN OVERLAY — SVG turbulence noise */
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    z-index:9990;
+    opacity:.30;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  /* DEEPER PAPER FIBER LAYER */
+  body::after{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    z-index:9988;
+    opacity:.18;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'><filter id='f'><feTurbulence type='turbulence' baseFrequency='0.012' numOctaves='3' seed='7'/><feColorMatrix values='0 0 0 0 0.55  0 0 0 0 0.5  0 0 0 0 0.4  0 0 0 0.4 0'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  }
+
+  ::selection{background:var(--red);color:var(--paper)}
+
+  /* ====================================================================
+     SCROLL PROGRESS BAR — sticky 3px red→navy gradient at very top
+     ==================================================================== */
+  .scroll-progress{
+    position:fixed;top:0;left:0;
+    width:0%;height:3px;
+    background:linear-gradient(90deg, var(--red), var(--gold), var(--navy));
+    z-index:99998;
+    transition:width .08s linear;
+    box-shadow:0 1px 4px rgba(0,0,0,.3);
+  }
+
+  /* ====================================================================
+     SOUND TOGGLE
+     ==================================================================== */
+  .sound-toggle{
+    position:fixed;top:14px;right:14px;
+    z-index:99997;
+    background:var(--ink);
+    color:var(--gold);
+    border:2px solid var(--gold);
+    padding:7px 12px 6px;
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:.7rem;
+    cursor:pointer;
+    box-shadow:3px 3px 0 var(--red);
+    transition:transform .1s linear, background .1s linear;
+  }
+  .sound-toggle:hover{transform:translate(-2px,-2px); background:var(--red); color:var(--white); border-color:var(--white);}
+  .sound-toggle:active{transform:translate(0,0);}
+  .sound-toggle .icon{font-size:.9rem;margin-right:6px;}
+
+  /* ====================================================================
+     TYPOGRAPHY PRIMITIVES
+     ==================================================================== */
+  .display{
+    font-family:"Big Shoulders Stencil Display","Alfa Slab One",Impact,sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:-.01em;
+    line-height:.82;
+  }
+  .slab{
+    font-family:"Alfa Slab One","Big Shoulders Stencil Display",serif;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:.005em;
+    line-height:.95;
+  }
+  .mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:500;}
+  .eyebrow{
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:.78rem;
+    color:var(--ink);
+  }
+
+  .misreg{
+    text-shadow:
+      2px 2px 0 var(--cyan),
+      -1px -1px 0 rgba(212,8,33,.35);
+  }
+  .misreg-red{
+    text-shadow:
+      3px 3px 0 var(--cyan),
+      -2px 0 0 rgba(12,12,12,.6);
+  }
+
+  /* Letter-stagger reveal — each letter is a span */
+  .stagger-letter{
+    display:inline-block;
+    opacity:0;
+    transform:translateY(40px) rotate(8deg);
+    transition:opacity .5s cubic-bezier(.2,.8,.2,1), transform .65s cubic-bezier(.34,1.56,.64,1);
+    will-change:transform,opacity;
+  }
+  .stagger-letter.in{opacity:1;transform:translateY(0) rotate(0);}
+
+  /* ====================================================================
+     LAYOUT WRAPPERS
+     ==================================================================== */
+  .wrap{max-width:1320px;margin:0 auto;padding:0 24px;}
+  @media(min-width:900px){.wrap{padding:0 48px}}
+
+  /* ====================================================================
+     LEGACY MARQUEE KEYFRAMES — kept for .divider-track which still uses slide
+     ==================================================================== */
+  @keyframes slide{
+    from{transform:translateX(0)}
+    to{transform:translateX(-100%)}
+  }
+  @keyframes slideReverse{
+    from{transform:translateX(-100%)}
+    to{transform:translateX(0)}
+  }
+
+  /* ====================================================================
+     HERO — CINEMATIC ASYMMETRIC (Dark Edition)
+     Type left / portrait right. Deep blacks, blood reds, fire embers,
+     gold seal, scrolling ticker on top.
+     ==================================================================== */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    padding:0;
+    text-align:left;
+    overflow:hidden;
+    isolation:isolate;
+    width:100%;
+    max-width:100%;
+    background-color:#0a0510;
+    /* Desktop: clean dark bg with atmospheric red glows. The figure is rendered as a positioned <img> element below, not as bg-image */
+    background-image:
+      radial-gradient(ellipse at 15% 90%, rgba(212,8,33,0.18), transparent 55%),
+      radial-gradient(ellipse at 75% 50%, rgba(212,8,33,0.10), transparent 60%),
+      radial-gradient(ellipse at 50% 0%, rgba(0,0,0,0.30), transparent 70%);
+    color:#fafafa;
+  }
+  /* Hero figure — positioned <img> element behind the text. Right half of the hero, fades into the dark left side */
+  .hero-figure{
+    position:absolute;
+    top:0;
+    right:0;
+    height:100%;
+    width:64%;
+    z-index:0;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  .hero-figure img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    display:block;
+  }
+  /* Soft left-edge fade on the figure so it blends into the dark area where the type sits */
+  .hero-figure::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,
+      rgba(10,5,16,.95) 0%,
+      rgba(10,5,16,.55) 14%,
+      rgba(10,5,16,.20) 32%,
+      rgba(10,5,16,0) 55%);
+    pointer-events:none;
+  }
+  /* keep all real content sections in their own stacking context */
+  .hero, header.hero, section, footer{position:relative;z-index:1;}
+  /* FLAG DIVIDER — horizontal flag-stripe band that bridges sections */
+  .flag-divider{
+    position:relative;
+    width:100%;
+    height:36px;
+    background:var(--ink);
+    overflow:hidden;
+    z-index:1;
+  }
+  .flag-divider-stripes{
+    position:absolute;
+    inset:0;
+    background:repeating-linear-gradient(
+      to bottom,
+      var(--red) 0 6px,
+      var(--white) 6px 12px
+    );
+    /* navy canton on the far left, like a folded flag stripe */
+    background-image:
+      linear-gradient(90deg, var(--navy) 0 18%, transparent 18%),
+      repeating-linear-gradient(to bottom, var(--red) 0 6px, var(--white) 6px 12px);
+    box-shadow:0 4px 14px -6px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.08), inset 0 -1px 0 rgba(0,0,0,.4);
+  }
+  /* small white stars on the navy canton portion */
+  .flag-divider-stripes::after{
+    content:"";
+    position:absolute;
+    top:0;left:0;height:100%;width:18%;
+    background-image:radial-gradient(circle, rgba(255,255,255,.85) 1px, transparent 1.4px);
+    background-size:14px 12px;
+    background-position:7px 6px;
+    mix-blend-mode:screen;
+    opacity:.85;
+  }
+  @media(max-width:700px){
+    .flag-divider{height:28px;}
+    .flag-divider-stripes::after{background-size:11px 10px;}
+  }
+  /* HERO BG VIDEO: desktop base; mobile keeps its own video path. */
+  .hero-bg-video{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .7s ease-out;
+  }
+  .hero-bg-video.is-loaded{opacity:1;}
+  /* Overlay sits ON TOP of the video — bottom-darkening for type readability (matches the static bg) */
+  .hero-bg-overlay{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    background-image:
+      radial-gradient(ellipse at 50% 95%, rgba(212,8,33,0.22), transparent 55%),
+      radial-gradient(ellipse at 50% 0%, rgba(0,0,0,0.40), transparent 70%),
+      linear-gradient(180deg, transparent 0%, transparent 38%, rgba(10,5,16,.55) 62%, rgba(10,5,16,.92) 100%);
+  }
+  /* All hero content paints on top of the video + overlay */
+  .hero-ticker,
+  .hero-embers,
+  .hero-grid,
+  .hero-copy{position:relative;z-index:2;}
+  /* CRT scanlines — barely there */
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    z-index:1;
+    background:repeating-linear-gradient(0deg, rgba(255,255,255,.04) 0 1px, transparent 1px 4px);
+    pointer-events:none;
+    opacity:.5;
+  }
+  /* faint star wash — cinematic poster grain */
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><g fill='%23ffc940' opacity='0.05'><text x='20' y='40' font-family='monospace' font-size='14'>%E2%98%85</text><text x='110' y='80' font-family='monospace' font-size='10'>%E2%98%85</text><text x='60' y='120' font-family='monospace' font-size='12'>%E2%98%85</text></g></svg>");
+    background-repeat:repeat;
+    background-size:160px 160px;
+    opacity:.6;
+  }
+
+  /* ---- Top scrolling ticker (white-on-black, full-width) ---- */
+  .hero-ticker{
+    position:relative;
+    z-index:5;
+    width:100%;
+    height:30px;
+    background:#000;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    overflow:hidden;
+    white-space:nowrap;
+    display:flex;align-items:center;
+  }
+  .hero-ticker-track{
+    display:inline-block;
+    font-family:"JetBrains Mono",monospace;
+    font-size:11px;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    color:#fafafa;
+    animation:heroTicker 38s linear infinite;
+    padding-left:100%;
+    will-change:transform;
+  }
+  .hero-ticker-track .ht-star{color:var(--red);margin:0 14px;}
+  .hero-ticker-track .ht-item{margin:0 6px;}
+  @keyframes heroTicker{
+    from{transform:translateX(0);}
+    to{transform:translateX(-100%);}
+  }
+
+  /* ---- DESKTOP: asymmetric LEFT type stack, bg figure on the right (overlay layout) ---- */
+  .hero-ticker{flex:0 0 auto;}
+  .hero-grid{
+    position:relative;
+    z-index:3;
+    display:grid;
+    grid-template-columns:minmax(0, 720px);
+    justify-content:flex-start;
+    align-items:center;
+    width:100%;
+    flex:1 1 auto;
+    min-height:calc(100vh - 30px);
+    padding:clamp(36px,5vw,72px) clamp(20px,4vw,64px) clamp(36px,5vw,72px) clamp(28px,5vw,80px);
+    gap:0;
+  }
+  /* hide separate image column — figure is now in hero bg image */
+  .hero-image-wrap{display:none !important;}
+  .hero-copy{
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    text-align:left;
+    gap:clamp(14px,1.6vw,22px);
+    position:relative;
+    z-index:4;
+    max-width:100%;
+  }
+
+  /* eyebrow row: $AMERICA + EST. 2026 */
+  .hero-eyebrow-row{
+    display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+    width:100%;max-width:640px;
+    border-bottom:1px solid rgba(255,255,255,.18);
+    padding-bottom:10px;
+  }
+  .hero-mark{
+    font-family:"JetBrains Mono",monospace;
+    font-weight:600;font-size:14px;letter-spacing:.18em;color:#fafafa;
+  }
+  .hero-mark .mark-dollar{color:var(--red);}
+  .hero-est{
+    font-family:"JetBrains Mono",monospace;
+    font-size:10px;letter-spacing:.3em;color:#fafafa;opacity:.6;text-transform:uppercase;
+  }
+
+  /* small kicker — gold for legibility on the dark cinematic bg */
+  .hero-kicker{
+    font-family:"Big Shoulders Stencil Display","Anton",Impact,sans-serif;
+    font-weight:900;
+    font-size:13px;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0;
+    display:inline-flex;align-items:center;gap:9px;
+    text-shadow:0 1px 2px rgba(0,0,0,.55);
+  }
+  .hero-kicker .pulse-dot{
+    display:inline-block;width:8px;height:8px;border-radius:50%;
+    background:var(--red);
+    box-shadow:0 0 0 0 rgba(212,8,33,.7);
+    animation:livepulse 1.4s infinite;
+    flex:0 0 8px;
+  }
+
+  /* MASSIVE stenciled headline — vertical white→gold gradient + animated gleam sweep */
+  .hero-headline-stack{
+    font-family:"Big Shoulders Stencil Display","Anton",Impact,sans-serif;
+    color:#fafafa; /* fallback if background-clip unsupported */
+    text-transform:uppercase;
+    font-weight:900;
+    line-height:.84;
+    letter-spacing:-.025em;
+    margin:0;
+    font-size:clamp(80px,10vw,172px);
+    /* Two layers, both clipped to text:
+       1) gleam highlight (animated horizontal sweep)
+       2) base white→gold vertical gradient (static) */
+    background-image:
+      linear-gradient(95deg, transparent 38%, rgba(255,255,255,.55) 50%, transparent 62%),
+      linear-gradient(180deg, #fafafa 0%, #fafafa 40%, #f4dc92 75%, #ffc940 100%);
+    background-size:240% 100%, 100% 100%;
+    background-position:120% 50%, 0 0;
+    background-repeat:no-repeat;
+    -webkit-background-clip:text;
+            background-clip:text;
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+    text-shadow:0 2px 18px rgba(212,8,33,.28), 0 0 28px rgba(255,201,64,.18);
+    animation:heroGleam 6.5s ease-in-out infinite;
+  }
+  @keyframes heroGleam{
+    0%,18% { background-position: 120% 50%, 0 0; }
+    55%    { background-position: -40% 50%, 0 0; }
+    100%   { background-position: -40% 50%, 0 0; }
+  }
+  .hero-headline-stack .ln{display:block;}
+  /* "IS" inside the "IS BACK" line keeps the gold gradient + gleam */
+  .hero-headline-stack .ln-isback{white-space:nowrap;}
+  .hero-headline-stack .ln-isback .ln-is{display:inline;margin-right:.08em;}
+  /* ln-is inherits the gleam + a warmer gold base for emphasis */
+  .hero-headline-stack .ln-is{
+    background-image:
+      linear-gradient(95deg, transparent 38%, rgba(255,255,255,.7) 50%, transparent 62%),
+      linear-gradient(180deg, #ffe7a3 0%, #ffc940 60%, #e2a92a 100%);
+    background-size:240% 100%, 100% 100%;
+    background-position:120% 50%, 0 0;
+    background-repeat:no-repeat;
+    -webkit-background-clip:text;
+            background-clip:text;
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+    animation:heroGleam 6.5s ease-in-out infinite;
+  }
+
+  /* italic deck — high contrast for legibility on busy bg */
+  .hero-deck{
+    font-family:"Work Sans",sans-serif;
+    font-style:italic;font-weight:500;
+    font-size:clamp(16px,1.4vw,18px);
+    color:#ffffff;
+    max-width:540px;margin:0;line-height:1.45;
+    text-shadow:0 1px 4px rgba(0,0,0,.7), 0 0 18px rgba(0,0,0,.4);
+  }
+
+  /* CTA pills row */
+  .hero-ctas{
+    display:flex;gap:14px;
+    align-items:center;
+    flex-wrap:wrap;
+    margin:6px 0 4px;
+  }
+  .btn.hero-btn{
+    -webkit-appearance:none;appearance:none;
+    cursor:pointer;
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    font-size:1rem;letter-spacing:.08em;text-transform:uppercase;
+    padding:0 22px;
+    min-height:56px;height:56px;
+    text-decoration:none;
+    transition:transform .18s ease, box-shadow .18s ease, background .15s linear, color .15s linear, border-color .15s linear;
+    will-change:transform;
+  }
+  .btn.hero-btn.hero-btn-red{
+    background:var(--red);color:#fff;
+    border:3px solid var(--gold);
+    box-shadow:0 8px 20px -6px rgba(212,8,33,.55), 0 0 0 0 rgba(255,201,64,0);
+  }
+  .btn.hero-btn.hero-btn-red:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 24px -6px rgba(212,8,33,.65), 0 0 0 4px rgba(255,201,64,.3);
+  }
+  .btn.hero-btn.hero-btn-outline{
+    background:transparent;color:#fff;
+    border:2px solid #fafafa;
+  }
+  .btn.hero-btn.hero-btn-outline:hover{
+    transform:translateY(-2px);
+    background:#fafafa;color:var(--ink);
+  }
+  .btn.hero-btn:active{transform:translateY(0);}
+
+  /* CA pill */
+  .hero-ca{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(255,255,255,.04);
+    border:1px dashed rgba(255,255,255,.35);
+    padding:10px 14px;
+    margin:0;
+    max-width:100%;
+    position:relative;
+  }
+  .hero-ca .hero-ca-text{
+    font-family:"JetBrains Mono",monospace;
+    font-size:12px;letter-spacing:.02em;color:#fafafa;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    max-width:62vw;
+    user-select:all;
+  }
+  .copy-btn.hero-copy{
+    position:relative;
+    font-family:"JetBrains Mono",monospace;
+    font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    background:var(--red);color:#fff;
+    border:none;
+    padding:6px 12px;cursor:pointer;
+    overflow:visible;
+    min-width:auto;
+    min-height:32px;
+  }
+  .copy-btn.hero-copy:hover{filter:brightness(1.1);background:var(--red);color:#fff;}
+
+  /* ---- RIGHT COLUMN: hero image ---- */
+  .hero-image-wrap{
+    position:relative;
+    align-self:stretch;
+    overflow:hidden;
+    isolation:isolate;
+    min-height:100%;
+  }
+  /* faint flag canvas BEHIND the image — red+white stripes + navy canton */
+  .hero-image-wrap::before{
+    content:"";
+    position:absolute;inset:0;
+    z-index:0;
+    background:
+      /* navy canton top-left */
+      linear-gradient(135deg, rgba(10,31,74,.35) 0 28%, transparent 28%),
+      /* horizontal stripes red/white */
+      repeating-linear-gradient(
+        to bottom,
+        rgba(212,8,33,.18) 0 8.33%,
+        rgba(250,250,250,.05) 8.33% 16.66%
+      );
+    opacity:.55;
+    pointer-events:none;
+  }
+  .hero-image{
+    position:absolute;inset:0;
+    background-image:url("./Assets/trump-vertical.jpg");
+    background-size:cover;
+    background-position:center top;
+    z-index:1;
+    /* mask-fade left edge into the dark — cinematic asymmetry */
+    -webkit-mask-image:linear-gradient(to right, transparent 0%, #000 14%, #000 100%);
+            mask-image:linear-gradient(to right, transparent 0%, #000 14%, #000 100%);
+    filter:contrast(1.05) saturate(1.05);
+  }
+  /* radial red glow ambient around image */
+  .hero-image-wrap::after{
+    content:"";
+    position:absolute;inset:0;
+    z-index:2;
+    background:radial-gradient(ellipse at 65% 55%, rgba(212,8,33,.25), transparent 60%);
+    pointer-events:none;
+    mix-blend-mode:screen;
+  }
+
+  /* ---- Fire ember particles — concentrated in LOWER HALF of hero ---- */
+  .hero-embers{
+    position:absolute;
+    left:0;right:0;
+    bottom:0;
+    height:50%;
+    pointer-events:none;
+    z-index:1;
+    overflow:hidden;
+  }
+  .hero-embers .ember{
+    position:absolute;
+    border-radius:50%;
+    /* small ember: red→orange→gold core */
+    background:radial-gradient(circle, rgba(255,201,64,.95) 0%, rgba(212,8,33,.6) 50%, transparent 70%);
+    filter:blur(.4px);
+    opacity:0;
+    will-change:transform,opacity;
+    animation:emberRise linear infinite;
+  }
+  /* larger embers bias more red/orange (warmer, smokier core) */
+  .hero-embers .ember.big{
+    background:radial-gradient(circle, rgba(255,160,60,.95) 0%, rgba(212,8,33,.7) 45%, rgba(154,11,24,.35) 70%, transparent 80%);
+    filter:blur(.7px);
+  }
+  @keyframes emberRise{
+    0%{transform:translate3d(0,0,0) scale(.7);opacity:0;}
+    10%{opacity:.95;}
+    50%{transform:translate3d(8px,-48%,0) scale(1);opacity:.7;}
+    80%{transform:translate3d(-6px,-80%,0) scale(.85);opacity:.35;}
+    100%{transform:translate3d(4px,-100%,0) scale(.55);opacity:0;}
+  }
+  /* 12 embers — 8 small (4-6px) + 4 large (10-12px), wide horizontal spread, varied loops 12-18s */
+  .hero-embers .ember:nth-child(1){left:8%; bottom:-8px; width:5px;height:5px; animation-duration:14s;animation-delay:.0s;}
+  .hero-embers .ember:nth-child(2){left:17%;bottom:-10px;width:4px;height:4px; animation-duration:12s;animation-delay:1.6s;}
+  .hero-embers .ember:nth-child(3){left:26%;bottom:-6px; width:11px;height:11px;animation-duration:17s;animation-delay:.5s;}
+  .hero-embers .ember:nth-child(4){left:34%;bottom:-9px; width:5px;height:5px; animation-duration:13s;animation-delay:3.0s;}
+  .hero-embers .ember:nth-child(5){left:43%;bottom:-12px;width:6px;height:6px; animation-duration:15s;animation-delay:.8s;}
+  .hero-embers .ember:nth-child(6){left:51%;bottom:-7px; width:10px;height:10px;animation-duration:18s;animation-delay:2.2s;}
+  .hero-embers .ember:nth-child(7){left:60%;bottom:-10px;width:4px;height:4px; animation-duration:12s;animation-delay:1.2s;}
+  .hero-embers .ember:nth-child(8){left:68%;bottom:-8px; width:5px;height:5px; animation-duration:14s;animation-delay:4.0s;}
+  .hero-embers .ember:nth-child(9){left:75%;bottom:-11px;width:12px;height:12px;animation-duration:17s;animation-delay:.3s;}
+  .hero-embers .ember:nth-child(10){left:82%;bottom:-9px; width:6px;height:6px; animation-duration:13s;animation-delay:2.6s;}
+  .hero-embers .ember:nth-child(11){left:89%;bottom:-7px; width:4px;height:4px; animation-duration:12s;animation-delay:5.4s;}
+  .hero-embers .ember:nth-child(12){left:95%;bottom:-10px;width:10px;height:10px;animation-duration:16s;animation-delay:1.9s;}
+
+  /* ---- Mobile (≤900px) — stack ---- */
+  @media (max-width:900px){
+    .hero-grid{
+      grid-template-columns:1fr;
+      justify-content:stretch;
+      padding-left:0;
+      min-height:auto;
+    }
+    .hero-copy{
+      padding:clamp(24px,5vw,40px) clamp(18px,5vw,28px) clamp(40px,8vw,64px);
+      align-items:center;
+      text-align:center;
+    }
+    .hero-eyebrow-row{max-width:100%;}
+    .hero-headline-stack{
+      font-size:clamp(56px,14vw,110px);
+      line-height:.88;
+      text-align:center;
+      text-shadow:0 2px 14px rgba(212,8,33,.22);
+    }
+    .hero-ctas{width:100%;flex-direction:column;align-items:stretch;gap:12px;justify-content:center;}
+    .btn.hero-btn{width:100%;min-height:60px;height:60px;font-size:13px;}
+    .hero-ca{width:100%;justify-content:space-between;}
+    .hero-ca .hero-ca-text{font-size:11px;max-width:54vw;}
+    /* fewer embers on mobile — keep first 6 only */
+    .hero-embers .ember:nth-child(n+7){display:none;}
+  }
+  @media (max-width:480px){
+    .hero-headline-stack{font-size:clamp(50px,15vw,92px);}
+    .copy-btn.hero-copy{min-height:44px;min-width:64px;}
+  }
+  @media (max-width:360px){
+    .hero-headline-stack{font-size:clamp(46px,14vw,82px);letter-spacing:0;}
+    .hero-ca .hero-ca-text{font-size:10px;max-width:48vw;}
+    .btn.hero-btn{font-size:12px;letter-spacing:.06em;}
+  }
+
+  /* ====================================================================
+     OFFICIAL ADOPTION — SOCIAL PROOF SECTION (Dark Patriotic Edition)
+     Two cards on dark navy bg w/ patriotic bg image. Each card mimics
+     a real platform UI (YouTube + X) with profile bars under the banner.
+     ==================================================================== */
+  .adoption-section{
+    background-color:#0a1f4a;
+    background-image:
+      linear-gradient(180deg, rgba(10,31,74,.55), rgba(10,31,74,.85)),
+      url("./Assets/bg-adoption.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    color:#fafafa;
+    padding:clamp(64px,8vw,112px) clamp(20px,4vw,56px);
+    text-align:center;
+    position:relative;
+    isolation:isolate;
+  }
+  .adoption-eyebrow{
+    font-family:"Big Shoulders Stencil","Big Shoulders Display",Impact,sans-serif;
+    font-weight:900;
+    color:var(--gold);
+    font-size:clamp(13px,1.4vw,16px);
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    margin:0 0 14px 0;
+    line-height:1;
+  }
+  .adoption-heading{
+    font-family:"Big Shoulders Stencil","Big Shoulders Display",Impact,sans-serif;
+    font-weight:900;
+    color:#fafafa;
+    font-size:clamp(56px,8vw,120px);
+    line-height:.9;
+    letter-spacing:-.005em;
+    margin:0 0 18px 0;
+    text-transform:uppercase;
+  }
+  .adoption-heading .red-dot{color:var(--red);}
+  .adoption-sub{
+    font-family:"Work Sans","Inter",system-ui,sans-serif;
+    font-weight:500;
+    font-style:italic;
+    color:#f4ead5;
+    font-size:clamp(15px,1.6vw,18px);
+    line-height:1.55;
+    max-width:640px;
+    margin:0 auto clamp(36px,5vw,56px) auto;
+    opacity:.9;
+  }
+  .adoption-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(20px,3vw,40px);
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .adoption-card{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    background:#08111f;
+    border:2px solid var(--gold);
+    border-radius:14px;
+    box-shadow:0 18px 32px -16px rgba(0,0,0,.7), 0 0 0 1px rgba(255,201,64,.18) inset;
+    transition:box-shadow .25s ease, transform .25s ease;
+    will-change:transform;
+    overflow:hidden;
+    position:relative;
+    padding:16px;
+  }
+  .adoption-platform-label{
+    display:flex;align-items:center;justify-content:space-between;
+    font-family:"JetBrains Mono",monospace;
+    font-size:10.5px;letter-spacing:.22em;
+    text-transform:uppercase;
+    color:rgba(255,201,64,.85);
+    margin:0 0 12px 2px;
+    line-height:1;
+  }
+  .adoption-platform-label .platform-dot{
+    display:inline-block;width:6px;height:6px;border-radius:50%;
+    background:var(--gold);
+    margin-right:8px;
+    vertical-align:middle;
+  }
+  .adoption-img-wrap{
+    position:relative;
+    background:#0c0c0c;
+    line-height:0;
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .adoption-img{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:cover;
+  }
+  .adoption-verified{
+    position:absolute;
+    top:10px;left:10px;
+    background:var(--gold);
+    color:var(--ink);
+    font-family:"Big Shoulders Stencil","Big Shoulders Display",Impact,sans-serif;
+    font-weight:900;
+    font-size:11px;
+    letter-spacing:.18em;
+    padding:5px 9px 4px 9px;
+    border:2px solid var(--ink);
+    border-radius:2px;
+    line-height:1;
+    text-transform:uppercase;
+    z-index:2;
+    box-shadow:0 2px 0 0 rgba(0,0,0,.4);
+  }
+  /* Profile bar — fake-realistic platform UI under the banner image */
+  .adoption-profile{
+    display:flex;align-items:center;gap:12px;
+    padding:14px 4px 4px;
+    text-align:left;
+  }
+  .adoption-avatar{
+    flex:0 0 auto;
+    width:42px;height:42px;
+    border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;
+    font-family:"Big Shoulders Stencil","Big Shoulders Display",Impact,sans-serif;
+    font-weight:900;
+    font-size:14px;
+    letter-spacing:.04em;
+    background:#fafafa;
+    color:#08111f;
+    border:2px solid var(--gold);
+    line-height:1;
+    overflow:hidden;
+  }
+  .adoption-avatar.x-avatar{
+    background:#0c0c0c;color:#fafafa;border-color:#fafafa;
+    font-family:serif;font-size:22px;font-weight:700;
+  }
+  .adoption-profile-text{
+    flex:1 1 auto;
+    min-width:0;
+    display:flex;flex-direction:column;gap:2px;
+  }
+  .adoption-profile-name{
+    display:flex;align-items:center;gap:6px;
+    font-family:"Work Sans","Inter",system-ui,sans-serif;
+    font-weight:700;
+    font-size:14px;
+    color:#fafafa;
+    line-height:1.15;
+  }
+  .adoption-check{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:14px;height:14px;border-radius:50%;
+    background:#1d9bf0;
+    color:#fff;
+    font-size:10px;
+    line-height:1;
+    flex:0 0 14px;
+  }
+  .adoption-handle{
+    font-family:"JetBrains Mono",monospace;
+    font-size:11.5px;letter-spacing:.04em;
+    color:rgba(250,250,250,.6);
+    line-height:1.2;
+  }
+  .adoption-bio{
+    font-family:"JetBrains Mono",monospace;
+    font-size:10.5px;letter-spacing:.02em;
+    color:rgba(250,250,250,.55);
+    line-height:1.35;
+    margin-top:3px;
+    text-transform:none;
+  }
+  .adoption-sub-pill{
+    flex:0 0 auto;
+    background:#fafafa;
+    color:#0c0c0c;
+    font-family:"Work Sans","Inter",system-ui,sans-serif;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:.04em;
+    padding:6px 12px;
+    border-radius:18px;
+    line-height:1;
+    text-transform:none;
+  }
+  @media (hover:hover) and (pointer:fine){
+    .adoption-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 26px 50px -16px rgba(0,0,0,.85), 0 0 0 1px var(--gold) inset;
+    }
+  }
+  .adoption-anchor{
+    margin:clamp(40px,5vw,64px) auto 0 auto;
+    max-width:1100px;
+    background:var(--gold);
+    color:var(--ink);
+    border:3px solid var(--ink);
+    box-shadow:0 6px 0 0 rgba(0,0,0,.5);
+    font-family:"Big Shoulders Stencil","Big Shoulders Display",Impact,sans-serif;
+    font-weight:900;
+    font-size:clamp(22px,3.2vw,34px);
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    padding:22px 24px;
+    text-align:center;
+    line-height:1;
+  }
+  @media (max-width:700px){
+    .adoption-grid{grid-template-columns:1fr;}
+    .adoption-card{padding:14px;}
+    .adoption-profile{gap:10px;padding:12px 2px 2px;}
+    .adoption-avatar{width:38px;height:38px;font-size:13px;}
+    .adoption-avatar.x-avatar{font-size:20px;}
+    .adoption-profile-name{font-size:13px;}
+    .adoption-handle{font-size:11px;}
+    .adoption-bio{font-size:10px;}
+    .adoption-sub-pill{font-size:10.5px;padding:5px 10px;}
+  }
+  @media (max-width:480px){
+    .adoption-section{padding:clamp(48px,12vw,80px) 16px;}
+    .adoption-heading{font-size:clamp(44px,12vw,72px);}
+    .adoption-sub{font-size:14px;}
+    .adoption-verified{font-size:10px;padding:4px 7px 3px 7px;letter-spacing:.14em;}
+    .adoption-anchor{font-size:18px;letter-spacing:.14em;padding:16px 14px;box-shadow:0 4px 0 0 rgba(0,0,0,.5);}
+  }
+
+  /* ====================================================================
+     TRAILER SECTION — BROADCAST 01 / PRESIDENTIAL ADDRESS
+     Asymmetric LEFT/RIGHT grid — bold stenciled headline + red highlight bar
+     on the left, vertical 9/16 video on the right. Dark patriotic bg image.
+     ==================================================================== */
+  .trailer-section{
+    background-color:#0a1f4a;
+    background-image:
+      linear-gradient(180deg, rgba(10,31,74,.55), rgba(10,31,74,.85)),
+      url("./Assets/bg-trailer.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    color:#fafafa;
+    text-align:left;
+    padding:clamp(64px,8vw,120px) clamp(20px,4vw,56px);
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+  }
+
+  /* Top strip: slate plate (left) + LIVE indicator (top-right) */
+  .broadcast-top-strip{
+    position:relative;z-index:2;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
+    margin:0 0 clamp(28px,4vw,44px) 0;
+  }
+  .broadcast-top-live{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:"JetBrains Mono",monospace;
+    font-size:11px;letter-spacing:.25em;
+    text-transform:uppercase;
+    color:#fafafa;font-weight:700;
+  }
+  .broadcast-top-live .top-live-dot{
+    display:inline-block;width:9px;height:9px;border-radius:50%;
+    background:var(--red);
+    box-shadow:0 0 0 0 rgba(212,8,33,.7);
+    animation:livepulse 1.4s infinite;
+  }
+  @media (prefers-reduced-motion:reduce){
+    .broadcast-top-live .top-live-dot{animation:none;box-shadow:none;}
+  }
+
+  /* ===== Broadcast slate (now lives in top strip, left) ===== */
+  .broadcast-slate{
+    position:relative;z-index:2;
+    display:inline-flex;align-items:center;
+    gap:14px;
+    padding:8px 14px;
+    margin:0;
+    border:2px solid var(--ink);
+    background:var(--white);
+    box-shadow:0 4px 0 0 var(--ink);
+  }
+  .broadcast-slate .slate-no{
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    font-size:18px;
+    letter-spacing:.08em;
+    color:var(--ink);
+    line-height:1;
+  }
+  .broadcast-slate .slate-divider{
+    width:1px;height:18px;background:var(--ink);opacity:.55;
+  }
+  .broadcast-slate .slate-meta{
+    font-family:"JetBrains Mono",monospace;
+    font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+  .broadcast-slate .slate-live{
+    display:inline-flex;align-items:center;gap:6px;
+    font-family:"JetBrains Mono",monospace;
+    font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--red);font-weight:700;
+  }
+  .broadcast-slate .slate-live .slate-dot{
+    display:inline-block;width:7px;height:7px;border-radius:50%;
+    background:var(--red);
+    animation:slateLivePulse 1.4s ease-in-out infinite;
+  }
+  @keyframes slateLivePulse{
+    0%,100%{opacity:1;}
+    50%{opacity:.35;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .broadcast-slate .slate-live .slate-dot{animation:none;}
+  }
+  /* ===== Asymmetric broadcast grid — type LEFT, video RIGHT ===== */
+  .broadcast-grid{
+    position:relative;z-index:2;
+    display:grid;
+    grid-template-columns:58% 42%;
+    align-items:center;
+    gap:clamp(28px,4vw,56px);
+    max-width:1280px;
+    margin:0 auto;
+  }
+  .broadcast-left{
+    display:flex;
+    flex-direction:column;
+    gap:clamp(14px,1.6vw,22px);
+    text-align:left;
+  }
+  .broadcast-right{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  /* small mono kicker above the headline — brighter red on dark navy bg */
+  .broadcast-kicker{
+    position:relative;z-index:2;
+    font-family:"JetBrains Mono",monospace;
+    font-size:12px;letter-spacing:.25em;
+    text-transform:uppercase;
+    color:#ff2b3a;font-weight:700;
+    margin:0;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .broadcast-kicker .kicker-star{color:var(--red);}
+  .trailer-heading{
+    font-family:"Big Shoulders Stencil Display","Anton",Impact,sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:-.005em;
+    line-height:.85;
+    font-size:clamp(60px,9vw,140px);
+    color:#fafafa;
+    margin:0;
+    text-shadow:none;
+    position:relative;z-index:2;
+  }
+  .trailer-heading .ln{display:block;}
+  .trailer-heading .red-dot{color:var(--red);}
+  .trailer-subtag{
+    font-family:"Work Sans","Inter",system-ui,sans-serif;
+    font-weight:500;
+    font-style:italic;
+    color:#f4ead5;
+    font-size:clamp(15px,1.55vw,18px);
+    line-height:1.5;
+    max-width:480px;
+    margin:0;
+    opacity:.9;
+  }
+  /* Big red highlight bar — TRUMP DECLARES AMERICA IS GREAT AGAIN! */
+  .broadcast-redbar{
+    background:var(--red);
+    color:#fafafa;
+    padding:clamp(16px,2vw,22px) clamp(18px,2.4vw,28px);
+    font-family:"Big Shoulders Stencil Display","Anton",Impact,sans-serif;
+    font-weight:900;
+    font-size:clamp(22px,2.8vw,36px);
+    line-height:1.05;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+    box-shadow:6px 6px 0 0 rgba(0,0,0,.45);
+    border:2px solid rgba(255,255,255,.08);
+    margin:6px 0 0;
+    max-width:560px;
+  }
+  /* WE DID IT! tag pill — small, red filled */
+  .broadcast-pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--red);
+    color:#fafafa;
+    font-family:"Big Shoulders Stencil Display","Anton",Impact,sans-serif;
+    font-weight:900;
+    font-size:14px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    padding:8px 14px 7px;
+    border:2px solid rgba(255,255,255,.12);
+    box-shadow:3px 3px 0 0 rgba(0,0,0,.4);
+    align-self:flex-start;
+    line-height:1;
+  }
+
+  /* ===== Broadcast monitor wrap — holds ON AIR plate + frame + controls ===== */
+  .broadcast-monitor{
+    position:relative;
+    width:100%;
+    max-width:320px;
+    margin:0 auto;
+    z-index:2;
+  }
+  /* ON AIR plate — sits half over the top edge of the monitor frame */
+  .on-air-plate{
+    position:absolute;
+    left:50%;top:0;
+    transform:translate(-50%,-55%);
+    z-index:5;
+    display:inline-flex;align-items:center;gap:8px;
+    padding:6px 12px 5px;
+    background:var(--white);
+    border:2px solid var(--navy);
+    box-shadow:0 3px 0 0 var(--ink);
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    font-size:13px;letter-spacing:.18em;
+    color:var(--ink);text-transform:uppercase;
+    line-height:1;
+    white-space:nowrap;
+  }
+  .on-air-plate .on-air-dot{
+    display:inline-block;width:8px;height:8px;border-radius:50%;
+    background:var(--red);
+    box-shadow:0 0 0 2px rgba(212,8,33,.18);
+  }
+
+  /* 3-layer ornate frame — outer thick gold (8px) + middle navy (12px) + inner thin gold (3px). */
+  .trailer-frame{
+    position:relative;
+    width:100%;
+    aspect-ratio:9/16;
+    margin:0 auto;
+    background:var(--ink);
+    /* outer gold band (border) */
+    border:8px solid var(--gold);
+    /* middle navy + inner gold delivered via inset box-shadows */
+    box-shadow:
+      inset 0 0 0 12px var(--navy),
+      inset 0 0 0 15px var(--gold),
+      inset 0 0 0 17px var(--ink),
+      0 18px 32px -12px rgba(0,0,0,.65),
+      0 3px 0 0 rgba(0,0,0,.3);
+    overflow:hidden;
+    z-index:2;
+  }
+  /* CRT scanline overlay over the video */
+  .trailer-frame::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,.04) 0px,
+      rgba(255,255,255,.04) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    mix-blend-mode:overlay;
+    opacity:.5;
+    z-index:3;
+  }
+  /* gold corner brackets — static, sit on the inner gold ring */
+  .trailer-frame .corner-star{
+    position:absolute;
+    color:var(--gold);
+    opacity:1;
+    z-index:4;
+    pointer-events:none;
+    font-size:14px;line-height:1;
+    font-family:"Times New Roman",serif;
+    text-shadow:0 0 2px rgba(0,0,0,.55);
+  }
+  .trailer-frame .corner-star.tl{top:6px;left:6px;}
+  .trailer-frame .corner-star.tr{top:6px;right:6px;}
+  .trailer-frame .corner-star.bl{bottom:6px;left:6px;}
+  .trailer-frame .corner-star.br{bottom:6px;right:6px;}
+  @media (max-width:700px){
+    .trailer-frame .corner-star{font-size:11px;}
+  }
+  .trailer-video{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    border:0;display:block;
+    object-fit:cover;
+    background:var(--ink);
+  }
+
+  /* ===== Custom video player — broadcast deck aesthetic ===== */
+  .tv-bar{
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:48px;
+    padding:0 10px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#0c0c0c;
+    border-top:1px solid var(--gold);
+    color:var(--white);
+    z-index:4;
+    opacity:0;
+    transition:opacity .3s ease;
+    -webkit-user-select:none;user-select:none;
+  }
+  .trailer-frame:hover .tv-bar,
+  .trailer-frame.tv-show .tv-bar,
+  .tv-bar:focus-within{opacity:1;}
+  /* always visible on touch devices */
+  @media (hover:none){
+    .tv-bar{opacity:1;}
+  }
+  .tv-btn{
+    -webkit-appearance:none;appearance:none;
+    cursor:pointer;
+    display:inline-flex;align-items:center;justify-content:center;
+    background:transparent;
+    color:var(--white);
+    border:2px solid var(--white);
+    border-radius:50%;
+    padding:0;
+    font-family:"JetBrains Mono",monospace;
+    font-weight:700;
+    line-height:1;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s linear, color .15s linear, border-color .15s linear;
+    flex:0 0 auto;
+  }
+  .tv-btn:hover{
+    transform:translateY(-1px);
+    color:var(--gold);
+    border-color:var(--gold);
+    box-shadow:0 4px 10px -2px rgba(0,0,0,.5);
+  }
+  .tv-btn:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:2px;
+  }
+  .tv-play{
+    width:38px;height:38px;
+    background:var(--white);
+    color:var(--ink);
+    border-color:var(--ink);
+    font-size:13px;
+  }
+  .tv-play:hover{
+    color:var(--ink);
+    background:var(--white);
+    border-color:var(--navy);
+    box-shadow:0 0 0 2px var(--navy), 0 4px 10px -2px rgba(0,0,0,.5);
+  }
+  .tv-mute{
+    width:34px;height:34px;
+    font-size:13px;
+  }
+  .tv-fs{
+    width:30px;height:30px;
+    border-radius:4px;
+    font-size:12px;
+  }
+  .tv-progress{
+    flex:1 1 auto;
+    position:relative;
+    height:18px;
+    cursor:pointer;
+    display:flex;align-items:center;
+    touch-action:none;
+  }
+  .tv-progress-track{
+    position:relative;
+    width:100%;
+    height:6px;
+    background:var(--navy);
+    border-radius:0;
+    overflow:visible;
+  }
+  .tv-progress-fill{
+    position:absolute;
+    left:0;top:0;bottom:0;
+    width:0%;
+    background:var(--gold);
+    border-radius:0;
+    pointer-events:none;
+  }
+  .tv-progress-knob{
+    position:absolute;
+    top:50%;left:0%;
+    width:12px;height:12px;
+    border-radius:50%;
+    background:var(--white);
+    border:2px solid var(--ink);
+    transform:translate(-50%,-50%) scale(0);
+    transition:transform .15s ease;
+    pointer-events:none;
+  }
+  .tv-progress:hover .tv-progress-knob,
+  .tv-progress.tv-drag .tv-progress-knob{
+    transform:translate(-50%,-50%) scale(1);
+  }
+  .tv-time{
+    font-family:"JetBrains Mono",monospace;
+    font-size:11px;
+    letter-spacing:.04em;
+    color:var(--white);
+    flex:0 0 auto;
+    white-space:nowrap;
+  }
+  /* mobile: bigger tap targets */
+  @media (max-width:700px){
+    .tv-bar{height:52px;padding:0 8px;gap:8px;}
+    .tv-play{width:44px;height:44px;font-size:14px;}
+    .tv-mute{width:44px;height:44px;font-size:14px;}
+    .tv-fs{width:40px;height:40px;font-size:13px;}
+    .tv-progress{height:24px;}
+    .tv-time{display:none;} /* timestamp lives in the chyron on mobile too */
+  }
+  /* Hide native time on desktop too — chyron carries the timestamp */
+  .tv-time{display:none;}
+
+  /* ===== Info cards row — 3 columns desktop, stacks mobile ===== */
+  .broadcast-info-cards{
+    position:relative;z-index:2;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:clamp(16px,2.4vw,28px);
+    max-width:1280px;
+    margin:clamp(48px,6vw,80px) auto 0;
+  }
+  .broadcast-info-card{
+    background:#06143a;
+    border:1px solid rgba(255,201,64,.55);
+    padding:22px;
+    box-shadow:4px 4px 0 0 var(--red);
+    text-align:left;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .broadcast-info-card h4{
+    font-family:"Big Shoulders Stencil Display","Anton",Impact,sans-serif;
+    font-weight:900;
+    font-size:18px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 10px;
+    line-height:1.05;
+  }
+  .broadcast-info-card p{
+    font-family:"Work Sans","Inter",system-ui,sans-serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:15px;
+    color:#f4ead5;
+    line-height:1.45;
+    margin:0;
+    opacity:.92;
+  }
+  @media (hover:hover) and (pointer:fine){
+    .broadcast-info-card:hover{
+      transform:translate(-2px,-2px);
+      box-shadow:6px 6px 0 0 var(--red);
+    }
+  }
+  @media (max-width:900px){
+    .broadcast-info-cards{grid-template-columns:1fr;}
+  }
+
+  /* ===== Watch the Address Live CTA — large red filled button ===== */
+  .broadcast-cta-wrap{
+    position:relative;z-index:2;
+    margin:clamp(36px,5vw,56px) auto 0;
+    max-width:480px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+  .broadcast-cta{
+    display:inline-flex;align-items:center;justify-content:center;
+    gap:10px;
+    width:100%;
+    min-height:64px;
+    padding:0 24px;
+    background:var(--red);
+    color:#fafafa;
+    border:3px solid var(--gold);
+    box-shadow:0 6px 0 0 rgba(0,0,0,.45);
+    font-family:"Big Shoulders Stencil Display","Anton",Impact,sans-serif;
+    font-weight:900;
+    font-size:clamp(16px,1.8vw,20px);
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    cursor:pointer;
+    text-decoration:none;
+    line-height:1;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s linear;
+    -webkit-appearance:none;appearance:none;
+  }
+  .broadcast-cta:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 0 -2px rgba(0,0,0,.45), 0 0 0 1px var(--gold);
+  }
+  .broadcast-cta:active{
+    transform:translateY(2px);
+    box-shadow:0 2px 0 0 rgba(0,0,0,.45);
+  }
+  .broadcast-cta:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  /* ===== Mobile (≤900px) — stack to single column ===== */
+  @media (max-width:900px){
+    .broadcast-grid{
+      grid-template-columns:1fr;
+      gap:clamp(24px,5vw,36px);
+      text-align:left;
+    }
+    .broadcast-right{order:2;}
+    .broadcast-left{order:1;}
+    .broadcast-monitor{max-width:280px;}
+    .trailer-heading{font-size:clamp(48px,13vw,96px);}
+    .broadcast-redbar{font-size:clamp(20px,5vw,30px);max-width:100%;box-shadow:4px 4px 0 0 rgba(0,0,0,.45);}
+    .broadcast-cta-wrap{max-width:100%;}
+    .broadcast-cta{min-height:60px;font-size:15px;}
+  }
+  @media (max-width:480px){
+    .broadcast-cta{letter-spacing:.12em;font-size:13px;padding:0 16px;}
+    .broadcast-info-card{padding:18px;}
+    .broadcast-info-card p{font-size:14px;}
+  }
+
+  /* LIVE pulse dot */
+  .live-dot{
+    display:inline-block;width:9px;height:9px;border-radius:50%;
+    background:var(--red);
+    box-shadow:0 0 0 0 rgba(212,8,33,.7);
+    animation:livepulse 1.4s infinite;
+    margin-right:7px;vertical-align:middle;
+  }
+  @keyframes livepulse{
+    0%{box-shadow:0 0 0 0 rgba(212,8,33,.7)}
+    70%{box-shadow:0 0 0 12px rgba(212,8,33,0)}
+    100%{box-shadow:0 0 0 0 rgba(212,8,33,0)}
+  }
+
+  /* ====================================================================
+     BUY ROW + BTN
+     ==================================================================== */
+  .buyrow{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  .btn{
+    -webkit-appearance:none;appearance:none;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:18px 18px;
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:1.05rem;
+    text-decoration:none;
+    border:3px solid var(--ink);
+    background:var(--red);
+    color:var(--white);
+    box-shadow:5px 5px 0 var(--ink), 10px 10px 0 var(--gold);
+    transition:transform .12s cubic-bezier(.2,1.6,.4,1), background .15s linear, color .15s linear, box-shadow .15s linear;
+    text-align:center;
+    position:relative;
+    will-change:transform;
+  }
+  .btn:hover{
+    background:var(--gold);
+    color:var(--ink);
+    box-shadow:2px 2px 0 var(--ink), 5px 5px 0 var(--red);
+    transform:translate(3px,3px);
+  }
+  .btn.secondary{
+    background:var(--navy);
+    color:var(--white);
+    box-shadow:5px 5px 0 var(--red), 10px 10px 0 var(--gold);
+  }
+  .btn.secondary:hover{
+    background:var(--white);
+    color:var(--navy);
+    box-shadow:2px 2px 0 var(--red), 5px 5px 0 var(--navy);
+  }
+  .btn .arrow{font-family:"JetBrains Mono",monospace;font-weight:700}
+  .btn .live-dot{margin-right:0;}
+
+  /* ====================================================================
+     CA STRIP
+     ==================================================================== */
+  .ca-block{
+    position:relative;
+    border:3px solid var(--ink);
+    background:var(--paper-warm);
+    padding:14px 16px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    box-shadow:5px 5px 0 var(--navy);
+  }
+  .ca-block .ca-label{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  }
+  .ca-block .ca-label .lbl{
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-weight:800;
+    font-size:.72rem;
+  }
+  .ca-block .ca-label .net{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.7rem;
+    letter-spacing:.08em;
+    color:var(--ink);
+    opacity:.7;
+  }
+  .ca-row{
+    display:flex;
+    gap:10px;
+    align-items:stretch;
+  }
+  .ca-row .ca-text{
+    flex:1;
+    background:var(--paper);
+    border:2px solid var(--ink);
+    padding:10px 12px;
+    font-family:"JetBrains Mono",monospace;
+    font-weight:700;
+    font-size:.86rem;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color:var(--ink);
+    user-select:all;
+  }
+  .copy-btn{
+    position:relative;
+    cursor:pointer;
+    border:2px solid var(--ink);
+    background:var(--ink);
+    color:var(--gold);
+    padding:0 16px;
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-size:.82rem;
+    overflow:visible;
+    transition:background .15s linear, color .15s linear;
+  }
+  .copy-btn:hover{background:var(--red);color:var(--white);}
+  /* RUBBER-STAMP COPIED IMPRESSION */
+  .stamp{
+    position:absolute;
+    pointer-events:none;
+    inset:auto auto auto 50%;
+    top:-28px;
+    transform:translateX(-50%) rotate(-12deg) scale(.6);
+    color:var(--red);
+    font-family:"Alfa Slab One",serif;
+    font-size:1.5rem;
+    letter-spacing:.04em;
+    border:4px solid var(--red);
+    padding:4px 14px 2px;
+    text-transform:uppercase;
+    opacity:0;
+    transition:opacity .18s ease, transform .35s cubic-bezier(.2,1.6,.4,1);
+    background:transparent;
+    white-space:nowrap;
+    text-shadow:1px 1px 0 rgba(212,8,33,.5);
+    mix-blend-mode:multiply;
+    z-index:5;
+  }
+  .stamp.show{
+    opacity:.92;
+    transform:translateX(-50%) rotate(-12deg) scale(1);
+  }
+
+  /* CONFETTI BURST particles for copy-CA */
+  .confetti-host{position:absolute; inset:0; pointer-events:none; overflow:visible; z-index:6;}
+  .confetti-bit{
+    position:absolute; left:50%; top:50%;
+    width:8px;height:8px;
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+    will-change:transform,opacity;
+  }
+  .confetti-bit.r{background:var(--red);}
+  .confetti-bit.b{background:var(--navy);}
+  .confetti-bit.g{background:var(--gold);}
+  .confetti-bit.w{background:var(--white); border:1px solid var(--ink);}
+
+  /* ====================================================================
+     DIAGONAL DIVIDER STRIP
+     ==================================================================== */
+  .divider{
+    background:var(--ink);
+    color:var(--paper);
+    padding:10px 0;
+    overflow:hidden;
+    transform:rotate(-1.4deg) translateY(-6px);
+    margin:36px -6vw;
+    border-top:3px solid var(--red);
+    border-bottom:3px solid var(--gold);
+    position:relative;
+    z-index:3;
+  }
+  .divider-track{
+    display:flex;
+    gap:38px;
+    white-space:nowrap;
+    font-family:"Alfa Slab One",serif;
+    font-size:1.4rem;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    animation:slide 28s linear infinite;
+  }
+  .divider-track span.r{color:var(--red)}
+  .divider-track span.g{color:var(--gold)}
+  .divider-track span.star{font-family:"JetBrains Mono",monospace;color:var(--gold);}
+
+  /* ====================================================================
+     SECTION POSTER FRAME
+     ==================================================================== */
+  section.poster{
+    position:relative;
+    padding:64px 0 56px;
+    border-top:3px solid var(--ink);
+  }
+  section.poster:first-of-type{border-top:none;}
+  section.poster .poster-no{
+    position:absolute;
+    top:14px;right:24px;
+    font-family:"JetBrains Mono",monospace;
+    font-weight:700;
+    font-size:.72rem;
+    letter-spacing:.16em;
+    color:var(--ink);
+    opacity:.55;
+    z-index:5;
+  }
+  .section-eyebrow{
+    display:inline-block;
+    background:var(--ink);
+    color:var(--paper);
+    padding:5px 12px 4px;
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:.74rem;
+    margin-bottom:18px;
+    border:2px solid var(--gold);
+  }
+  .section-eyebrow.red{background:var(--red);color:var(--white);}
+  .section-eyebrow.gold{background:var(--gold);color:var(--ink);border-color:var(--ink);}
+  .section-eyebrow.navy{background:var(--navy);color:var(--white);}
+  .section-h{
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    line-height:.85;
+    letter-spacing:-.005em;
+    margin:0 0 22px;
+    font-size:clamp(46px,8vw,108px);
+    color:var(--ink);
+  }
+  .section-h .red{color:var(--red);}
+  .section-h .gold{color:var(--gold-warm); text-shadow:2px 2px 0 var(--ink);}
+  .section-h .navy{color:var(--navy);}
+  .section-h .ghost{
+    text-shadow:3px 3px 0 var(--navy);
+  }
+
+  /* NAVY SECTION VARIANT */
+  section.poster.navy-section{
+    background:var(--navy);
+    color:var(--white);
+    border-top:6px solid var(--gold);
+    border-bottom:6px solid var(--red);
+    overflow:hidden;
+  }
+  section.poster.navy-section .section-h{color:var(--white);}
+  section.poster.navy-section .section-h .red{color:var(--red);}
+  section.poster.navy-section .section-h .gold{color:var(--gold); text-shadow:2px 2px 0 var(--ink);}
+  section.poster.navy-section .section-h .ghost{text-shadow:3px 3px 0 var(--red);}
+  section.poster.navy-section .poster-no{color:var(--gold);opacity:.7;}
+  section.poster.navy-section .section-eyebrow{background:var(--gold);color:var(--ink);border-color:var(--white);}
+  /* halftone drift on navy sections */
+  section.poster.navy-section::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.08) 1px, transparent 1.5px);
+    background-size:18px 18px;
+    pointer-events:none;
+    animation:halftoneDrift 60s linear infinite;
+    z-index:0;
+  }
+  section.poster.navy-section > *{position:relative;z-index:1;}
+  @keyframes halftoneDrift{
+    0%{background-position:0 0}
+    100%{background-position:180px 180px}
+  }
+
+  /* ====================================================================
+     DECLARATION — USA gradient broadcast aftermath
+     Two columns: video LEFT (42%) + type stack RIGHT (58%).
+     Mirror of the trailer section, reversed. USA gradient bg with
+     slow drift, confetti drift overlay. No bunting, no eagles, no chyron.
+     ==================================================================== */
+  .declaration-section{
+    position:relative;
+    background:#0c1230;
+    padding:clamp(64px,8vw,108px) clamp(20px,4vw,36px);
+    border-top:3px solid var(--ink);
+    border-bottom:3px solid var(--ink);
+    overflow:hidden;
+    isolation:isolate;
+    color:#fafafa;
+  }
+  /* Animated USA radial-gradient bg — slow drift */
+  .declaration-section::before{
+    content:"";
+    position:absolute;inset:-6%;
+    z-index:0;
+    background:
+      radial-gradient(circle at 18% 22%, rgba(212,8,33,.55) 0%, transparent 38%),
+      radial-gradient(circle at 82% 18%, rgba(255,201,64,.32) 0%, transparent 36%),
+      radial-gradient(circle at 78% 82%, rgba(10,31,74,.85) 0%, transparent 48%),
+      radial-gradient(circle at 22% 84%, rgba(250,250,250,.10) 0%, transparent 40%),
+      linear-gradient(135deg, #0a1f4a 0%, #0c1230 55%, #1a0a1f 100%);
+    background-size:140% 140%;
+    background-position:0% 0%;
+    animation:declarationGradientDrift 22s ease-in-out infinite alternate;
+    pointer-events:none;
+  }
+  /* Subtle vignette + scanline grain */
+  .declaration-section::after{
+    content:"";
+    position:absolute;inset:0;
+    z-index:0;
+    background:
+      radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(6,12,32,.55) 100%);
+    pointer-events:none;
+  }
+  @keyframes declarationGradientDrift{
+    0%  {background-position:0% 0%;}
+    50% {background-position:4% 3%;}
+    100%{background-position:-3% 5%;}
+  }
+  /* Top red bar + bottom navy bar — kept as channel-signature accents */
+  .declaration-section .declaration-bar-top,
+  .declaration-section .declaration-bar-bottom{
+    position:absolute;left:0;right:0;
+    height:6px;
+    z-index:3;
+    pointer-events:none;
+  }
+  .declaration-section .declaration-bar-top{top:0;background:var(--red);}
+  .declaration-section .declaration-bar-bottom{bottom:0;background:var(--navy);}
+
+  /* Confetti drift — particle host spans entire section */
+  .declaration-confetti{
+    position:absolute;inset:0;
+    z-index:1;
+    pointer-events:none;
+    overflow:hidden;
+  }
+  .declaration-confetti span{
+    position:absolute;
+    top:-6%;
+    width:7px;height:11px;
+    border-radius:1px;
+    opacity:0;
+    will-change:transform,opacity;
+    animation:confettiDrift linear infinite;
+  }
+  .declaration-confetti span.c-red   {background:#d40821;}
+  .declaration-confetti span.c-white {background:#fafafa;}
+  .declaration-confetti span.c-navy  {background:#0a1f4a;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);}
+  .declaration-confetti span.c-gold  {background:#ffc940;}
+  /* Individual particle positions / delays / durations / sway */
+  .declaration-confetti span:nth-child(1) {left: 4%; animation-duration:14s; animation-delay:-2s;  --sway:14px;}
+  .declaration-confetti span:nth-child(2) {left:11%; animation-duration:18s; animation-delay:-7s;  --sway:-22px;}
+  .declaration-confetti span:nth-child(3) {left:18%; animation-duration:12s; animation-delay:-1s;  --sway:18px;}
+  .declaration-confetti span:nth-child(4) {left:24%; animation-duration:20s; animation-delay:-9s;  --sway:-12px;}
+  .declaration-confetti span:nth-child(5) {left:31%; animation-duration:16s; animation-delay:-4s;  --sway:24px;}
+  .declaration-confetti span:nth-child(6) {left:38%; animation-duration:22s; animation-delay:-12s; --sway:-18px;}
+  .declaration-confetti span:nth-child(7) {left:45%; animation-duration:13s; animation-delay:-3s;  --sway:16px;}
+  .declaration-confetti span:nth-child(8) {left:52%; animation-duration:19s; animation-delay:-8s;  --sway:-26px;}
+  .declaration-confetti span:nth-child(9) {left:59%; animation-duration:15s; animation-delay:-5s;  --sway:20px;}
+  .declaration-confetti span:nth-child(10){left:66%; animation-duration:21s; animation-delay:-11s; --sway:-14px;}
+  .declaration-confetti span:nth-child(11){left:72%; animation-duration:17s; animation-delay:-6s;  --sway:22px;}
+  .declaration-confetti span:nth-child(12){left:78%; animation-duration:14s; animation-delay:-10s; --sway:-20px;}
+  .declaration-confetti span:nth-child(13){left:84%; animation-duration:18s; animation-delay:-2s;  --sway:14px;}
+  .declaration-confetti span:nth-child(14){left:89%; animation-duration:11s; animation-delay:-7s;  --sway:-16px;}
+  .declaration-confetti span:nth-child(15){left:94%; animation-duration:20s; animation-delay:-13s; --sway:18px;}
+  .declaration-confetti span:nth-child(16){left:97%; animation-duration:16s; animation-delay:-4s;  --sway:-22px;}
+  @keyframes confettiDrift{
+    0%   {transform:translate3d(0,-4vh,0) rotate(0deg);   opacity:0;}
+    8%   {opacity:.85;}
+    50%  {transform:translate3d(var(--sway,18px),58vh,0) rotate(220deg);}
+    92%  {opacity:.85;}
+    100% {transform:translate3d(0,118vh,0) rotate(540deg); opacity:0;}
+  }
+
+  /* Two-column grid: video LEFT (42%) — type stack RIGHT (58%) */
+  .declaration-section .wrap{
+    position:relative;
+    z-index:2;
+    max-width:1280px;
+    margin:0 auto;
+    padding:0;
+  }
+  .declaration-grid{
+    display:grid;
+    grid-template-columns:42% 58%;
+    align-items:center;
+    gap:clamp(28px,4vw,56px);
+  }
+  .declaration-left{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .declaration-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    text-align:left;
+    gap:clamp(14px,1.6vw,22px);
+  }
+  .declaration-section .declaration-eyebrow{
+    display:inline-block;
+    background:var(--ink);
+    color:var(--gold);
+    border:2px solid var(--gold);
+    padding:5px 14px 4px;
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:.78rem;
+    margin:0;
+  }
+  .declaration-section .declaration-h{
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    line-height:.88;
+    letter-spacing:-.005em;
+    margin:0;
+    font-size:clamp(40px,6vw,88px);
+    color:#fafafa;
+    text-shadow:0 2px 0 rgba(0,0,0,.35);
+  }
+  .declaration-section .declaration-h .dh-em{
+    color:var(--red);
+    margin:0 .08em;
+    font-weight:900;
+  }
+  .declaration-section .declaration-sub{
+    font-family:"Work Sans",sans-serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(15px,1.55vw,18px);
+    color:#f4ead5;
+    max-width:50ch;
+    margin:0;
+    line-height:1.55;
+    opacity:.92;
+  }
+  /* Smaller red CTA — "Watch the full address" */
+  .declaration-cta{
+    display:inline-flex;align-items:center;justify-content:center;
+    gap:10px;
+    margin-top:clamp(8px,1.2vw,16px);
+    min-height:52px;
+    padding:0 22px;
+    background:var(--red);
+    color:#fafafa;
+    border:3px solid var(--gold);
+    box-shadow:0 5px 0 0 rgba(0,0,0,.45);
+    font-family:"Big Shoulders Stencil Display","Anton",Impact,sans-serif;
+    font-weight:900;
+    font-size:clamp(14px,1.4vw,16px);
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    cursor:pointer;
+    text-decoration:none;
+    line-height:1;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s linear;
+    -webkit-appearance:none;appearance:none;
+  }
+  .declaration-cta:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 0 -1px rgba(0,0,0,.45), 0 0 0 1px var(--gold);
+  }
+  .declaration-cta:active{
+    transform:translateY(2px);
+    box-shadow:0 2px 0 0 rgba(0,0,0,.45);
+  }
+  .declaration-cta:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+  /* 9:16 portrait card with ornate gold/navy/gold/ink frame + corner stars */
+  .declaration-card{
+    position:relative;
+    margin:0 auto;
+    max-width:360px;
+    width:100%;
+    aspect-ratio:9/16;
+    background:var(--ink);
+    border:4px solid var(--gold-warm);
+    box-shadow:
+      inset 0 0 0 2px var(--navy),
+      inset 0 0 0 4px var(--gold-warm),
+      inset 0 0 0 6px var(--ink),
+      0 18px 40px -18px rgba(12,12,12,.5),
+      0 6px 14px -8px rgba(12,12,12,.35);
+    overflow:hidden;
+    line-height:0;
+  }
+  .declaration-card video{
+    display:block;
+    width:100%;
+    height:100%;
+    background:#000;
+    object-fit:cover;
+  }
+  .declaration-card .dc-corner{
+    position:absolute;
+    width:14px;height:14px;
+    color:var(--gold-warm);
+    font-size:10px;
+    line-height:1;
+    z-index:3;
+    text-shadow:0 1px 0 rgba(0,0,0,.6);
+    pointer-events:none;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .declaration-card .dc-corner.tl{top:6px;left:6px;}
+  .declaration-card .dc-corner.tr{top:6px;right:6px;}
+  .declaration-card .dc-corner.bl{bottom:6px;left:6px;}
+  .declaration-card .dc-corner.br{bottom:6px;right:6px;}
+  /* "Tap to play with sound" overlay */
+  .declaration-card .dc-unmute{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(12,12,12,.18);
+    border:0;
+    cursor:pointer;
+    z-index:4;
+    transition:opacity .25s ease, visibility .25s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .declaration-card .dc-unmute .dc-play{
+    width:80px;height:80px;
+    border-radius:50%;
+    background:var(--red);
+    border:3px solid var(--gold-warm);
+    box-shadow:0 8px 20px -6px rgba(0,0,0,.6);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;
+    font-size:30px;
+    line-height:1;
+    padding-left:5px;
+  }
+  .declaration-card .dc-unmute .dc-play-label{
+    position:absolute;
+    bottom:18px;left:0;right:0;
+    text-align:center;
+    font-family:"JetBrains Mono",monospace;
+    font-size:10px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:#fff;
+    text-shadow:0 1px 2px rgba(0,0,0,.7);
+    font-weight:700;
+  }
+  .declaration-card.is-playing .dc-unmute{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+  /* Mobile (≤900px) — single column, video first then type */
+  @media (max-width:900px){
+    .declaration-grid{
+      grid-template-columns:1fr;
+      gap:clamp(24px,5vw,36px);
+    }
+    .declaration-left{order:1;}
+    .declaration-right{
+      order:2;
+      align-items:center;
+      text-align:center;
+    }
+    .declaration-section .declaration-h{font-size:clamp(36px,9vw,56px);}
+    .declaration-section .declaration-sub{margin-left:auto;margin-right:auto;}
+    .declaration-cta{
+      width:100%;
+      max-width:360px;
+      min-height:60px;
+    }
+  }
+  @media (max-width:700px){
+    .declaration-section{padding:clamp(48px,9vw,72px) clamp(16px,5vw,22px);}
+    .declaration-section .declaration-h{font-size:clamp(30px,8vw,46px);}
+    .declaration-card{max-width:280px;border-width:3px;}
+    .declaration-card .dc-unmute .dc-play{width:70px;height:70px;font-size:26px;}
+  }
+  @media (max-width:480px){
+    .declaration-cta{letter-spacing:.12em;font-size:13px;padding:0 16px;}
+  }
+  @media (max-width:360px){
+    .declaration-card{max-width:240px;}
+    .declaration-card .dc-unmute .dc-play{width:64px;height:64px;font-size:24px;}
+  }
+  /* Honor reduced motion — kill drift + confetti animations */
+  @media (prefers-reduced-motion:reduce){
+    .declaration-section::before{animation:none;}
+    .declaration-confetti span{animation:none;display:none;}
+  }
+
+  /* ====================================================================
+     MANIFESTO
+     ==================================================================== */
+  .manifesto-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:28px;
+    align-items:start;
+  }
+  @media(min-width:900px){
+    .manifesto-grid{grid-template-columns:1.1fr .9fr;gap:48px;}
+  }
+  .manifesto-body p{
+    font-family:"Work Sans",sans-serif;
+    font-size:clamp(17px,1.4vw,20px);
+    line-height:1.55;
+    margin:0 0 18px;
+    max-width:54ch;
+  }
+  .manifesto-body p strong{
+    font-family:"Alfa Slab One",serif;
+    font-weight:400;
+    color:var(--red);
+    text-transform:uppercase;
+    letter-spacing:.01em;
+  }
+  .manifesto-body .pullquote{
+    font-family:"Alfa Slab One",serif;
+    font-size:clamp(28px,3.6vw,44px);
+    line-height:1.05;
+    color:var(--ink);
+    text-transform:uppercase;
+    border-left:8px solid var(--red);
+    padding:6px 0 6px 18px;
+    margin:0 0 24px;
+    max-width:18ch;
+    background:linear-gradient(90deg, rgba(255,201,64,.25), transparent);
+  }
+  .manifesto-img{
+    position:relative;
+    border:4px solid var(--ink);
+    box-shadow:8px 8px 0 var(--red), 16px 16px 0 var(--navy);
+    aspect-ratio:1/1.15;
+    background:var(--paper-warm);
+    overflow:hidden;
+    transform:rotate(1.5deg);
+  }
+  .manifesto-img::before,
+  .manifesto-img::after{
+    content:"";position:absolute;inset:0;background-size:cover;background-position:center;
+  }
+  .manifesto-img::before{
+    background-image:url("./Assets/pen-folder.jpg");
+    filter:grayscale(1) contrast(1.55) brightness(1.05);
+    background-color:var(--paper-warm);
+    background-blend-mode:multiply;
+    mix-blend-mode:multiply;
+  }
+  .manifesto-img::after{
+    background-image:url("./Assets/pen-folder.jpg");
+    filter:grayscale(1) contrast(1.4) brightness(1.1);
+    background-color:var(--red);
+    background-blend-mode:screen;
+    mix-blend-mode:multiply;
+    opacity:.82;
+    transform:translate(3px,-2px);
+  }
+  .manifesto-img .tag{
+    position:absolute;bottom:-14px;left:-14px;
+    background:var(--gold);color:var(--ink);
+    padding:8px 14px 6px;
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;letter-spacing:.18em;text-transform:uppercase;
+    font-size:.84rem;
+    z-index:3;
+    box-shadow:3px 3px 0 var(--ink);
+    transform:rotate(-2deg);
+    border:2px solid var(--ink);
+  }
+  .manifesto-secondary{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-top:24px;
+  }
+  .manifesto-secondary .mini-img{
+    position:relative;
+    border:3px solid var(--ink);
+    aspect-ratio:1/1;
+    overflow:hidden;
+    box-shadow:4px 4px 0 var(--navy);
+    background:var(--paper-warm);
+  }
+  .manifesto-secondary .mini-img.eagle::before{
+    content:"";position:absolute;inset:0;
+    background:url("./Assets/eagle.jpg") center/cover no-repeat;
+    filter:grayscale(.4) contrast(1.3) brightness(.95);
+  }
+  .manifesto-secondary .mini-img.i1::before{
+    content:"";position:absolute;inset:0;
+    background:url("./Assets/i1.jpg") center/cover no-repeat;
+    filter:grayscale(.6) contrast(1.4) sepia(.15);
+  }
+  .manifesto-secondary .mini-img .mini-cap{
+    position:absolute;bottom:0;left:0;right:0;
+    background:var(--ink);color:var(--paper);
+    padding:6px 8px 5px;
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-size:.66rem;
+    border-top:2px solid var(--gold);
+  }
+
+  /* ====================================================================
+     HEADLINE MOMENT — full-bleed cinematic-2 + Ken Burns
+     ==================================================================== */
+  .headline-moment{
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+    padding:120px 0 130px;
+    margin:0;
+    border-top:6px solid var(--red);
+    border-bottom:6px solid var(--gold);
+    color:var(--white);
+  }
+  .headline-moment-bg{
+    position:absolute;inset:-8%;
+    background:url("./Assets/cinematic-2.jpg") center/cover no-repeat;
+    z-index:-2;
+    will-change:transform;
+    animation:kenburns 22s ease-in-out infinite alternate;
+    filter:contrast(1.15) brightness(.7);
+  }
+  @keyframes kenburns{
+    from{transform:scale(1.02) translate(0,0);}
+    to{transform:scale(1.18) translate(-2%, -2%);}
+  }
+  .headline-moment::before{
+    content:"";
+    position:absolute;inset:0;z-index:-1;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(212,8,33,.45), transparent 60%),
+      radial-gradient(ellipse at 70% 70%, rgba(10,31,74,.65), transparent 60%),
+      linear-gradient(180deg, rgba(6,20,58,.55), rgba(12,12,12,.7));
+    mix-blend-mode:multiply;
+  }
+  .headline-moment::after{
+    content:"";
+    position:absolute;inset:0;z-index:-1;
+    background:repeating-linear-gradient(0deg, rgba(255,255,255,.04) 0 1px, transparent 1px 5px);
+    pointer-events:none;
+  }
+  .headline-moment .wrap{position:relative;z-index:2;}
+  .headline-moment .pull{
+    font-family:"Alfa Slab One",serif;
+    text-transform:uppercase;
+    font-size:clamp(40px,7vw,98px);
+    line-height:.98;
+    margin:0;
+    color:var(--white);
+    letter-spacing:.005em;
+    max-width:14ch;
+    text-shadow:4px 4px 0 var(--ink), 8px 8px 0 rgba(212,8,33,.6);
+  }
+  .headline-moment .pull em{
+    font-style:normal;
+    color:var(--gold);
+    background:linear-gradient(180deg, var(--gold) 0%, var(--gold-warm) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-shadow:none;
+  }
+  .headline-moment .pull .red-word{color:var(--red);}
+  .headline-moment .credit{
+    margin-top:30px;
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-weight:800;
+    font-size:.78rem;
+    color:var(--gold);
+    border-top:2px solid var(--gold);
+    padding-top:14px;
+    display:inline-block;
+  }
+
+  /* ====================================================================
+     CHART
+     ==================================================================== */
+  .chart-shell{
+    border:4px solid var(--ink);
+    background:var(--ink);
+    box-shadow:10px 10px 0 var(--red), 20px 20px 0 var(--navy);
+    padding:0;
+    overflow:hidden;
+    position:relative;
+  }
+  .chart-banner{
+    background:var(--red);
+    color:var(--white);
+    padding:12px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-weight:800;
+    font-size:.85rem;
+    border-bottom:3px solid var(--ink);
+  }
+  #dexscreener-embed{position:relative;width:100%;padding-bottom:125%;background:#000;}
+  @media(min-width:1100px){#dexscreener-embed{padding-bottom:62%;}}
+  #dexscreener-embed iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:0;}
+
+  /* ====================================================================
+     HOW TO BUY
+     ==================================================================== */
+  .buy-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:32px;
+    align-items:start;
+  }
+  @media(min-width:900px){
+    .buy-grid{grid-template-columns:.85fr 1.15fr;gap:48px;}
+  }
+  .buy-img{
+    position:relative;
+    border:4px solid var(--ink);
+    box-shadow:-8px 8px 0 var(--red), -16px 16px 0 var(--gold);
+    aspect-ratio:1/1.2;
+    background:var(--paper-warm);
+    overflow:hidden;
+    transform:rotate(-2deg);
+  }
+  .buy-img::before,
+  .buy-img::after{
+    content:"";position:absolute;inset:0;background-size:cover;background-position:center 30%;
+  }
+  .buy-img::before{
+    background-image:url("./Assets/hat-new.jpg");
+    filter:grayscale(.2) contrast(1.45) brightness(1.0);
+    background-color:var(--paper-warm);
+    background-blend-mode:multiply;
+    mix-blend-mode:multiply;
+  }
+  .buy-img::after{
+    background-image:url("./Assets/hat-new.jpg");
+    filter:grayscale(.4) contrast(1.4) brightness(1.05);
+    background-color:var(--red);
+    background-blend-mode:screen;
+    mix-blend-mode:multiply;
+    opacity:.55;
+    transform:translate(-3px,-2px);
+  }
+  .buy-img .hat-cap{
+    position:absolute;bottom:0;left:0;right:0;
+    background:var(--ink);
+    color:var(--white);
+    padding:14px 16px;
+    font-family:"Alfa Slab One",serif;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    font-size:1.15rem;
+    line-height:1.1;
+    z-index:2;
+    border-top:3px solid var(--gold);
+  }
+  .buy-img .hat-cap em{font-style:normal;color:var(--gold)}
+  .buy-img .buy-inset{
+    position:absolute;
+    top:14px;right:-18px;
+    width:88px;height:88px;
+    background:url("./Assets/i2.jpg") center/cover no-repeat;
+    border:3px solid var(--gold);
+    box-shadow:3px 3px 0 var(--ink);
+    transform:rotate(6deg);
+    z-index:3;
+    filter:contrast(1.15);
+  }
+
+  .steps{
+    list-style:none;padding:0;margin:0;
+    display:grid;gap:14px;
+  }
+  .step{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:16px;
+    align-items:start;
+    border-top:2px solid var(--ink);
+    padding-top:14px;
+    transition:background .15s linear;
+    padding:14px 8px 8px;
+  }
+  .step:first-child{border-top:0;padding-top:8px;}
+  .step:hover{background:rgba(255,201,64,.18);}
+  .step .num{
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;
+    font-size:clamp(54px,8vw,90px);
+    line-height:.8;
+    color:var(--red);
+    text-shadow:3px 3px 0 var(--navy);
+    min-width:1.1em;
+    letter-spacing:-.02em;
+  }
+  .step h3{
+    font-family:"Alfa Slab One",serif;
+    font-size:clamp(20px,2.2vw,28px);
+    margin:0 0 6px;
+    text-transform:uppercase;
+    line-height:1;
+    letter-spacing:.005em;
+  }
+  .step p{
+    margin:0;
+    font-size:1rem;
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .step a{
+    color:var(--red);
+    font-weight:700;
+    text-decoration:underline;
+    text-decoration-thickness:2px;
+    text-underline-offset:3px;
+  }
+  .step a:hover{background:var(--red);color:var(--paper);text-decoration:none}
+
+  /* ====================================================================
+     TOKENOMICS — tilt cards
+     ==================================================================== */
+  .tok-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    perspective:1000px;
+  }
+  @media(min-width:700px){.tok-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:1100px){.tok-grid{grid-template-columns:repeat(4,1fr);}}
+  .tok-card{
+    border:4px solid var(--ink);
+    background:var(--paper);
+    color:var(--ink);
+    padding:18px 18px 22px;
+    position:relative;
+    box-shadow:6px 6px 0 var(--ink);
+    transition:box-shadow .2s ease, transform .12s ease;
+    transform-style:preserve-3d;
+    will-change:transform;
+  }
+  .tok-card:nth-child(1){background:var(--paper-warm); color:var(--ink); box-shadow:6px 6px 0 var(--red);}
+  .tok-card:nth-child(2){background:var(--white);      color:var(--ink); box-shadow:6px 6px 0 var(--navy);}
+  .tok-card:nth-child(3){background:var(--paper-warm); color:var(--ink); box-shadow:6px 6px 0 var(--gold);}
+  .tok-card:nth-child(4){background:var(--white);      color:var(--ink); box-shadow:6px 6px 0 var(--red);}
+  .tok-card .ord{
+    position:absolute;top:8px;right:12px;
+    font-family:"JetBrains Mono",monospace;
+    font-weight:700;font-size:.7rem;letter-spacing:.18em;
+    color:var(--ink);opacity:.6;
+  }
+  .tok-card h4{
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;text-transform:uppercase;
+    letter-spacing:.005em;
+    margin:18px 0 8px;
+    font-size:clamp(28px,3.2vw,40px);
+    line-height:.9;
+    color:var(--ink);
+  }
+  .tok-card .red{color:var(--red);}
+  .tok-card .navy{color:var(--navy);}
+  .tok-card .gold{color:var(--gold-warm);}
+  .tok-card p{
+    margin:0;font-size:.96rem;line-height:1.45;
+    color:var(--ink);
+  }
+
+  .why-block{
+    margin-top:48px;
+    border:4px solid var(--gold);
+    background:var(--ink);
+    color:var(--paper);
+    padding:32px 28px;
+    box-shadow:10px 10px 0 var(--red), 20px 20px 0 var(--navy);
+    position:relative;
+    overflow:hidden;
+  }
+  .why-block::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px, rgba(255,201,64,.06) 1px, transparent 1.5px);
+    background-size:14px 14px;
+    pointer-events:none;
+  }
+  .why-block > *{position:relative;}
+  .why-block h3{
+    font-family:"Alfa Slab One",serif;
+    text-transform:uppercase;
+    font-size:clamp(28px,3.6vw,46px);
+    margin:0 0 16px;
+    line-height:1;
+  }
+  .why-block h3 em{font-style:normal;color:var(--gold)}
+  .why-block ul{
+    list-style:none;padding:0;margin:0;
+    display:grid;gap:10px;
+  }
+  .why-block li{
+    font-family:"Work Sans",sans-serif;
+    font-size:1.05rem;
+    line-height:1.5;
+    padding-left:28px;
+    position:relative;
+  }
+  .why-block li::before{
+    content:"►";
+    position:absolute;left:0;top:1px;
+    color:var(--red);
+    font-family:"JetBrains Mono",monospace;
+    font-weight:700;
+  }
+
+  /* Eagle inset card */
+  .eagle-aside{
+    margin-top:32px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  @media(min-width:900px){
+    .eagle-aside{grid-template-columns:.6fr 1fr; align-items:center;}
+  }
+  .eagle-card{
+    position:relative;
+    aspect-ratio:1/1;
+    border:4px solid var(--gold);
+    background:url("./Assets/eagle.jpg") center/cover no-repeat;
+    box-shadow:6px 6px 0 var(--red);
+    transform:rotate(2deg);
+    overflow:hidden;
+  }
+  .eagle-card::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, transparent 50%, rgba(12,12,12,.6) 100%);
+  }
+  .eagle-card .stamp-text{
+    position:absolute;bottom:14px;left:14px;right:14px;
+    color:var(--gold);
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-weight:900;
+    font-size:.84rem;
+    z-index:2;
+    text-shadow:2px 2px 0 var(--ink);
+  }
+  .eagle-pull{
+    font-family:"Alfa Slab One",serif;
+    font-size:clamp(22px,2.6vw,34px);
+    line-height:1.1;
+    text-transform:uppercase;
+    color:var(--white);
+  }
+  .eagle-pull em{font-style:normal;color:var(--gold);}
+
+  /* ====================================================================
+     SOCIALS — magnetic + glow
+     ==================================================================== */
+  .socials{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  @media(min-width:700px){.socials{grid-template-columns:1fr 1fr}}
+  .soc{
+    text-decoration:none;
+    border:4px solid var(--ink);
+    background:var(--paper-warm);
+    padding:28px 24px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    color:var(--ink);
+    box-shadow:8px 8px 0 var(--red), 16px 16px 0 var(--navy);
+    transition:transform .12s cubic-bezier(.2,1.6,.4,1), background .15s linear, color .15s linear, box-shadow .15s linear;
+    position:relative;
+    will-change:transform;
+  }
+  .soc:hover{
+    background:var(--gold);color:var(--ink);
+    transform:translate(4px,4px);
+    box-shadow:4px 4px 0 var(--red), 8px 8px 0 var(--navy);
+  }
+  .soc:hover .soc-icon{background:var(--red);color:var(--white);border-color:var(--ink);}
+  .soc-icon{
+    width:64px;height:64px;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--ink);color:var(--gold);
+    border:3px solid var(--ink);
+    flex:0 0 auto;
+    transition:background .15s linear, color .15s linear;
+  }
+  .soc-icon svg{width:34px;height:34px;fill:currentColor;}
+  .soc h4{
+    font-family:"Alfa Slab One",serif;
+    text-transform:uppercase;
+    font-size:clamp(22px,2.4vw,30px);
+    margin:0 0 4px;
+    line-height:1;
+  }
+  .soc p{
+    margin:0;
+    font-family:"JetBrains Mono",monospace;
+    font-size:.85rem;
+    font-weight:700;
+    letter-spacing:.04em;
+    word-break:break-all;
+  }
+
+  /* ====================================================================
+     FOOTER — banner strip + ca + disclaimer
+     ==================================================================== */
+  .footer-strip{
+    height:140px;
+    background:url("./Assets/banner.jpg") center/cover no-repeat;
+    border-top:6px solid var(--gold);
+    border-bottom:6px solid var(--red);
+    position:relative;
+    overflow:hidden;
+  }
+  .footer-strip::after{
+    content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(90deg, rgba(10,31,74,.65) 0%, rgba(212,8,33,.4) 50%, rgba(12,12,12,.7) 100%);
+    mix-blend-mode:multiply;
+  }
+
+  footer{
+    background:var(--ink);
+    color:var(--paper);
+    padding:48px 0 36px;
+    position:relative;
+    margin-top:0;
+    overflow:hidden;
+  }
+  footer::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px, rgba(255,201,64,.05) 1px, transparent 1.5px);
+    background-size:18px 18px;
+    pointer-events:none;
+  }
+  footer .wrap{display:grid;gap:24px;position:relative;}
+  footer .foot-mark{
+    font-family:"Big Shoulders Stencil Display",sans-serif;
+    font-weight:900;text-transform:uppercase;
+    font-size:clamp(46px,8vw,90px);
+    line-height:.85;
+    letter-spacing:-.01em;
+    margin:0;
+    color:var(--paper);
+  }
+  footer .foot-mark .red{color:var(--red);}
+  footer .foot-mark .gold{color:var(--gold);}
+  footer .foot-mark .ghost{text-shadow:3px 3px 0 var(--navy);}
+  footer .foot-row{
+    display:grid;gap:18px;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:900px){
+    footer .foot-row{grid-template-columns:1.5fr 1fr;align-items:end;}
+  }
+  footer .ca-block{background:#181818;border-color:var(--gold);box-shadow:5px 5px 0 var(--red);}
+  footer .ca-block .ca-row .ca-text{background:#000;color:var(--gold);border-color:var(--gold);}
+  footer .ca-block .ca-label .lbl{color:var(--gold);}
+  footer .ca-block .ca-label .net{color:var(--paper);}
+  footer .copy-btn{background:var(--red);border-color:var(--gold);color:var(--white);}
+  footer .copy-btn:hover{background:var(--gold);color:var(--ink);}
+  footer .disclaimer{
+    font-family:"Work Sans",sans-serif;
+    font-size:.85rem;
+    line-height:1.55;
+    color:var(--paper);
+    opacity:.8;
+    max-width:60ch;
+  }
+  footer .legal{
+    display:flex;flex-wrap:wrap;gap:14px 24px;
+    font-family:"JetBrains Mono",monospace;
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold);opacity:.75;
+    border-top:1px solid rgba(255,201,64,.25);
+    padding-top:18px;
+    margin-top:8px;
+  }
+
+  /* ====================================================================
+     SCROLL REVEAL
+     ==================================================================== */
+  .reveal{
+    opacity:0;
+    transform:translateY(28px) rotate(-1.4deg);
+    transition:opacity .6s ease, transform .65s cubic-bezier(.2,.8,.2,1);
+    will-change:transform,opacity;
+  }
+  .reveal.in{
+    opacity:1;
+    transform:translateY(0) rotate(0deg);
+  }
+  .reveal.delay-1{transition-delay:.08s}
+  .reveal.delay-2{transition-delay:.16s}
+  .reveal.delay-3{transition-delay:.24s}
+
+  /* hide animation for users who prefer reduced motion */
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .divider-track{animation:none}
+    .stagger-letter{opacity:1;transform:none;transition:none}
+    .headline-moment-bg{animation:none;}
+    section.poster.navy-section::before{animation:none;}
+    .live-dot,.hero-kicker .pulse-dot{animation:none;}
+    .broadcast-top-live .top-live-dot{animation:none;}
+    .hero-embers{display:none;}
+    .hero-ticker-track{animation:none;}
+    .hero-headline-stack,.hero-headline-stack .ln-is{animation:none;background-position:0 0,0 0;}
+  }
+
+  /* ====================================================================
+     BACKGROUND VIDEO (DOCTRINE SECTION)
+     ==================================================================== */
+  .has-bgvideo{
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .bg-video{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  .bg-video iframe,
+  .bg-video video{
+    position:absolute;
+    top:50%;left:50%;
+    width:100%;
+    height:100%;
+    min-width:100%;
+    min-height:100%;
+    object-fit:cover;
+    transform:translate(-50%,-50%) scale(1.05);
+    border:0;
+    pointer-events:none;
+    filter:grayscale(.55) contrast(1.2) sepia(.08) brightness(.85);
+  }
+  .bg-video::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(212,8,33,.18), transparent 55%),
+      radial-gradient(circle at 70% 80%, rgba(10,31,74,.4), transparent 55%),
+      rgba(10,31,74,.6);
+    mix-blend-mode:multiply;
+    pointer-events:none;
+  }
+  .has-bgvideo > .wrap,
+  .has-bgvideo > .poster-no{
+    position:relative;
+    z-index:1;
+  }
+
+  /* ====================================================================
+     MOBILE TUNING
+     ==================================================================== */
+  @media(max-width:768px){
+    .sound-toggle{
+      top:calc(10px + env(safe-area-inset-top));
+      right:10px;
+      min-width:44px;
+      min-height:40px;
+      padding:8px 12px;
+    }
+    /* every image always fits */
+    img{max-width:100%;height:auto;}
+  }
+  /* ===== HERO MOBILE — cinematic (≤700px) — extra polish ===== */
+  @media(max-width:700px){
+    .hero{
+      padding:0;
+      /* Full screen until next section, so the figure's head shows above the type */
+      min-height:100svh;
+      min-height:100vh;
+      /* mobile bg image — figure centered, dark vertical gradient ONLY at the bottom for type readability */
+      background-image:
+        radial-gradient(ellipse at 50% 95%, rgba(212,8,33,0.22), transparent 55%),
+        linear-gradient(180deg, transparent 0%, transparent 35%, rgba(10,5,16,.55) 60%, rgba(10,5,16,.92) 100%),
+        url('./Assets/hero-mobile-bg.jpg');
+      background-size:auto, auto, cover;
+      background-position:center, center, center top;
+      background-repeat:no-repeat;
+    }
+    /* Hide the desktop hero figure <img> on mobile — mobile uses its own full-bleed bg */
+    .hero-figure{display:none;}
+    /* Mobile bg video — same lazy-loaded fade-in pattern, replaces the static jpg's role.
+       The static jpg above is the immediate-render fallback / poster. */
+    .hero-bg-video-mobile{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center top;
+      z-index:0;
+      opacity:0;
+      transition:opacity .9s ease-out;
+      pointer-events:none;
+      will-change:opacity;
+    }
+    .hero-bg-video-mobile.is-loaded{opacity:1;}
+    .hero-bg-video-mobile-overlay{
+      position:absolute;
+      inset:0;
+      z-index:1;
+      pointer-events:none;
+      background-image:
+        radial-gradient(ellipse at 50% 95%, rgba(212,8,33,0.22), transparent 55%),
+        linear-gradient(180deg, transparent 0%, transparent 35%, rgba(10,5,16,.55) 60%, rgba(10,5,16,.92) 100%);
+    }
+    /* Hide the desktop bg video on mobile (already hidden globally now, but keep this defensive) */
+    .hero-bg-video,
+    .hero-bg-overlay{display:none;}
+    /* Mobile: tighter padding-top + smaller scaled type. Centering already inherited from desktop rules. */
+    .hero-grid{
+      padding:clamp(20vh,24vh,28vh) clamp(14px,4vw,22px) clamp(20px,4vw,28px);
+      gap:12px;
+    }
+    .hero-headline-stack{
+      font-size:clamp(72px,19vw,140px);
+      line-height:.86;
+      letter-spacing:-.025em;
+    }
+    .hero-deck{font-size:14.5px;max-width:100%;}
+    .hero-ctas{gap:10px;margin-top:2px;}
+    .btn.hero-btn{min-height:50px;padding:12px 18px;font-size:13px;}
+    .hero-ca{margin-top:6px;}
+    .hero-kicker{font-size:11.5px;letter-spacing:.2em;}
+    .hero-eyebrow-row{max-width:100%;}
+
+    /* Trailer section mobile — smaller frame + tighter padding */
+    .trailer-section{padding:clamp(56px,10vw,88px) clamp(14px,4vw,22px);}
+    .broadcast-monitor{max-width:280px;}
+    .trailer-frame{
+      border-width:6px;
+      box-shadow:
+        inset 0 0 0 8px var(--navy),
+        inset 0 0 0 10px var(--gold),
+        inset 0 0 0 12px var(--ink),
+        0 14px 26px -10px rgba(0,0,0,.6);
+    }
+    .broadcast-slate{padding:7px 12px;gap:10px;}
+    .broadcast-slate .slate-no{font-size:15px;}
+    .broadcast-slate .slate-meta,
+    .broadcast-slate .slate-live{font-size:9.5px;letter-spacing:.14em;}
+    .on-air-plate{font-size:11px;padding:5px 10px 4px;letter-spacing:.16em;transform:translate(-50%,-58%) scale(.95);}
+  }
+  @media(max-width:414px){
+    .broadcast-monitor{max-width:240px;}
+  }
+  @media(max-width:380px){
+    .broadcast-monitor{max-width:220px;}
+    .trailer-frame{
+      border-width:5px;
+      box-shadow:
+        inset 0 0 0 7px var(--navy),
+        inset 0 0 0 9px var(--gold),
+        inset 0 0 0 11px var(--ink),
+        0 12px 22px -10px rgba(0,0,0,.6);
+    }
+  }
+
+  @media(max-width:480px){
+    .wrap{padding:0 16px;}
+    .divider{margin:28px -10vw;}
+    .divider-track{font-size:1.1rem;gap:24px;}
+    .why-block{padding:24px 18px}
+    .why-block li{font-size:1rem;}
+    .step{grid-template-columns:auto 1fr;gap:12px;padding:12px 4px 8px;}
+    .step .num{font-size:54px}
+    .step h3{font-size:20px;}
+    .step p{font-size:.95rem;}
+    .sound-toggle{font-size:.66rem;padding:7px 10px;min-width:44px;min-height:40px;}
+    /* shrink soc card paddings */
+    .soc{padding:22px 18px;gap:14px;}
+    .soc-icon{width:54px;height:54px;}
+    .soc-icon svg{width:28px;height:28px;}
+    .soc p{font-size:.78rem;}
+    /* poster section spacing */
+    section.poster{padding:clamp(36px,6vw,56px) 0 clamp(36px,6vw,52px);}
+    .section-h{font-size:clamp(40px,11vw,72px);margin-bottom:18px;}
+    .headline-moment{padding:80px 0 90px;}
+    /* footer typography */
+    footer{padding:40px 0 calc(28px + env(safe-area-inset-bottom));}
+    footer .foot-mark{font-size:clamp(40px,11vw,72px);}
+    /* offset for sticky mobile CTA bar so content isn't covered */
+    body.has-mobile-cta{padding-bottom:calc(70px + env(safe-area-inset-bottom));}
+    /* manifesto */
+    .manifesto-body p{font-size:16px;line-height:1.55;}
+    .manifesto-body .pullquote{font-size:clamp(26px,7vw,38px);padding:0 0 0 14px;border-left-width:6px;}
+    /* mini imgs */
+    .manifesto-secondary{gap:10px;}
+    /* footer CA block — keep tappable on small screens */
+    .ca-block{padding:12px 14px;}
+    .ca-row{flex-wrap:nowrap;}
+    .ca-row .ca-text{font-size:.72rem;padding:10px 10px;}
+    .copy-btn{padding:0 14px;font-size:.78rem;min-width:72px;min-height:44px;}
+    /* eagle-aside */
+    .eagle-pull{font-size:20px;}
+    /* ensure dexscreener height is workable on tall phones */
+    #dexscreener-embed{padding-bottom:140%;}
+  }
+  @media(max-width:360px){
+    .wrap{padding:0 14px;}
+    .ca-row .ca-text{font-size:.62rem;}
+    .copy-btn{font-size:.7rem;min-width:64px;padding:0 10px;min-height:44px;}
+    .trailer-frame{max-width:220px;}
+  }
+
+  /* ===== DESKTOP HERO VIDEO LAYER ===== */
+  @media(min-width:701px){
+  .hero.hero-cinematic{
+    min-height:100vh;
+    min-height:100dvh;
+    background:#050507 url("./Assets/hero-desktop-bg.jpg") center/cover no-repeat;
+  }
+  .hero.hero-cinematic::before,
+  .hero.hero-cinematic::after{display:none;}
+  .hero.hero-cinematic .hero-figure,
+  .hero.hero-cinematic .hero-bg-video-mobile,
+  .hero.hero-cinematic .hero-bg-video-mobile-overlay,
+  .hero.hero-cinematic .hero-ticker,
+  .hero.hero-cinematic .hero-embers,
+  .hero.hero-cinematic .hero-image-wrap{display:none !important;}
+  .hero.hero-cinematic .hero-bg-video{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    display:block !important;
+    width:100%;
+    height:100%;
+    max-width:none;
+    object-fit:cover;
+    object-position:center center;
+    transform:scale(1.14);
+    transform-origin:68% 48%;
+    opacity:0;
+    pointer-events:none;
+    filter:saturate(1.02) contrast(1.06) brightness(.76);
+    transition:opacity .7s ease-out;
+  }
+  .hero.hero-cinematic .hero-bg-video.is-loaded{opacity:1;}
+  .hero.hero-cinematic .hero-bg-overlay{
+    display:block !important;
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:
+      linear-gradient(90deg, rgba(5,5,7,.90) 0%, rgba(5,5,7,.72) 35%, rgba(5,5,7,.36) 61%, rgba(5,5,7,.42) 100%),
+      linear-gradient(180deg, rgba(5,5,7,.30) 0%, rgba(5,5,7,.12) 44%, rgba(5,5,7,.70) 100%);
+  }
+  .hero.hero-cinematic .hero-grid{
+    min-height:100vh;
+    min-height:100dvh;
+    padding:6.5rem 5rem 5rem clamp(6.75rem,8vw,8.5rem);
+    display:grid;
+    grid-template-columns:minmax(0, 46rem);
+    align-items:center;
+  }
+  .hero.hero-cinematic .hero-copy{
+    max-width:46rem;
+    gap:1rem;
+  }
+  .hero.hero-cinematic .hero-eyebrow-row{
+    max-width:36rem;
+    border-bottom-color:rgba(255,255,255,.28);
+  }
+  .hero.hero-cinematic .hero-headline-stack{
+    font-size:9.75rem;
+    letter-spacing:0;
+    line-height:.86;
+    max-width:8.5ch;
+    text-wrap:balance;
+  }
+  .hero.hero-cinematic .hero-deck{
+    font-size:1.1rem;
+    max-width:34rem;
+  }
+  }
+  /* ===== HORIZONTAL SCROLL SAFETY NET — global, every viewport ===== */
+  body{max-width:100vw;overflow-x:clip;}
+  .hero, section, header, footer{max-width:100vw;overflow-x:clip;}
+  img{max-width:100%;height:auto;}
+  @media (max-width:900px){
+    /* marquee tickers must not bleed sideways on mobile */
+    .divider{max-width:100vw;overflow:hidden;}
+    /* iframes/videos inside hero & sections never push beyond viewport */
+    iframe, video{max-width:100%;}
+    /* tokenomics: ensure single column at narrow widths handled by grid above */
+    .tok-grid{gap:14px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ============ SOUND TOGGLE ============ -->
+<button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">
+  <span class="icon" id="soundIcon">OFF</span><span id="soundLabel">SOUND</span>
+</button>
+
+<!-- ============ HERO — CINEMATIC ASYMMETRIC ============ -->
+<header class="hero hero-cinematic" aria-label="America Is Back hero">
+
+  <!-- Hero figure: kept for the existing mobile/fallback composition. -->
+  <div class="hero-figure" aria-hidden="true">
+    <img src="./Assets/hero-desktop-bg.jpg" alt="" loading="eager" decoding="async" />
+  </div>
+
+  <video class="hero-bg-video" id="heroBgVideo"
+         autoplay muted loop playsinline
+         preload="auto"
+         poster="./Assets/hero-desktop-bg.jpg"
+         aria-hidden="true" tabindex="-1">
+    <source src="./Assets/hero-bg.mp4?v=20260427-desktop-video" type="video/mp4" />
+  </video>
+  <div class="hero-bg-overlay" aria-hidden="true"></div>
+
+  <video class="hero-bg-video-mobile" id="heroBgVideoMobile"
+         autoplay muted loop playsinline
+         preload="auto"
+         poster="./Assets/hero-mobile-bg.jpg"
+         aria-hidden="true" tabindex="-1">
+    <source src="./Assets/hero-bg-mobile.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-bg-video-mobile-overlay" aria-hidden="true"></div>
+
+  <div class="hero-ticker" aria-hidden="true">
+    <div class="hero-ticker-track">
+      <span class="ht-star">&#9733;</span><span class="ht-item">SOLANA</span>
+      <span class="ht-star">&#9733;</span><span class="ht-item">FAIR LAUNCH</span>
+      <span class="ht-star">&#9733;</span><span class="ht-item">THE HAT STAYS ON</span>
+      <span class="ht-star">&#9733;</span><span class="ht-item">AMERICA IS BACK</span>
+      <span class="ht-star">&#9733;</span><span class="ht-item">STRONGER &middot; BOLDER &middot; WINNING AGAIN</span>
+      <span class="ht-star">&#9733;</span><span class="ht-item">SOLANA</span>
+      <span class="ht-star">&#9733;</span><span class="ht-item">FAIR LAUNCH</span>
+      <span class="ht-star">&#9733;</span><span class="ht-item">THE HAT STAYS ON</span>
+      <span class="ht-star">&#9733;</span><span class="ht-item">AMERICA IS BACK</span>
+      <span class="ht-star">&#9733;</span><span class="ht-item">STRONGER &middot; BOLDER &middot; WINNING AGAIN</span>
+    </div>
+  </div>
+
+  <div class="hero-embers" aria-hidden="true">
+    <span class="ember"></span><span class="ember"></span><span class="ember big"></span><span class="ember"></span>
+    <span class="ember"></span><span class="ember big"></span><span class="ember"></span><span class="ember"></span>
+    <span class="ember big"></span><span class="ember"></span><span class="ember"></span><span class="ember big"></span>
+  </div>
+
+  <!-- Asymmetric grid -->
+  <div class="hero-grid">
+
+    <!-- LEFT — type stack -->
+    <div class="hero-copy">
+      <div class="hero-eyebrow-row reveal">
+        <span class="hero-mark"><span class="mark-dollar">$</span>AMERICA</span>
+        <span class="hero-est">Est. 2026</span>
+      </div>
+
+      <p class="hero-kicker reveal delay-1">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        &#9733; Proudly Announcing &mdash; A New Era
+      </p>
+
+      <h1 class="hero-headline-stack reveal delay-1" aria-label="America Is Back">
+        <span class="ln ln-america">America</span>
+        <span class="ln ln-isback"><span class="ln-is">Is</span> Back</span>
+      </h1>
+
+      <p class="hero-deck reveal delay-2">Signed, sealed, and unstoppable. The greatest comeback in history is underway.</p>
+
+      <div class="hero-ctas reveal delay-2">
+        <a class="btn hero-btn hero-btn-red magnetic" href="https://pump.fun/coin/AVA8YuCsD2YgUSpdv3Hb2cjpdf8XAhGwyXmchxwopump" target="_blank" rel="noopener">Buy on Pump.fun &rarr;</a>
+        <a class="btn hero-btn hero-btn-outline magnetic" href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=AVA8YuCsD2YgUSpdv3Hb2cjpdf8XAhGwyXmchxwopump" target="_blank" rel="noopener">Swap on Jupiter &rarr;</a>
+      </div>
+
+      <div class="hero-ca reveal delay-3">
+        <span class="hero-ca-text" id="caHero" title="Contract address">AVA8YuCsD2YgUSpdv3Hb2cjpdf8XAhGwyXmchxwopump</span>
+        <button class="copy-btn hero-copy" data-copy="AVA8YuCsD2YgUSpdv3Hb2cjpdf8XAhGwyXmchxwopump" type="button" aria-label="Copy contract address">
+          Copy
+          <span class="stamp" aria-hidden="true">Copied</span>
+          <span class="confetti-host" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap" aria-hidden="true">
+      <div class="hero-image" role="img" aria-label="Portrait of the American comeback"></div>
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ============ OFFICIAL ADOPTION — SOCIAL PROOF SECTION ============ -->
+<section class="adoption-section" id="adoption" aria-label="Official adoption — White House and POTUS banners">
+  <p class="adoption-eyebrow reveal">&#9733; OFFICIAL ADOPTION</p>
+  <h2 class="adoption-heading reveal">From The Top<span class="red-dot">.</span></h2>
+  <p class="adoption-sub reveal">The official @WhiteHouse channel and @POTUS profile have adopted the AMERICA IS BACK banner. The movement is real.</p>
+
+  <div class="adoption-grid">
+    <a class="adoption-card magnetic reveal"
+       href="https://www.youtube.com/@WhiteHouse"
+       target="_blank" rel="noopener"
+       aria-label="Visit the official White House YouTube channel">
+      <p class="adoption-platform-label" aria-hidden="true">
+        <span><span class="platform-dot"></span>Official YouTube</span>
+        <span>&#9733;</span>
+      </p>
+      <div class="adoption-img-wrap">
+        <span class="adoption-verified" aria-hidden="true">VERIFIED &#10003;</span>
+        <img class="adoption-img"
+             src="./Assets/whitehouse-youtube.jpg"
+             alt="The White House YouTube channel banner reading America is Back"
+             loading="lazy"
+             width="1200" height="509">
+      </div>
+      <div class="adoption-profile">
+        <span class="adoption-avatar" aria-hidden="true">WH</span>
+        <div class="adoption-profile-text">
+          <span class="adoption-profile-name">
+            The White House
+            <span class="adoption-check" aria-label="Verified">&#10003;</span>
+          </span>
+          <span class="adoption-handle">@WhiteHouse</span>
+        </div>
+        <span class="adoption-sub-pill" aria-hidden="true">Subscribe</span>
+      </div>
+    </a>
+
+    <a class="adoption-card magnetic reveal"
+       href="https://x.com/POTUS"
+       target="_blank" rel="noopener"
+       aria-label="Visit the official POTUS profile on X">
+      <p class="adoption-platform-label" aria-hidden="true">
+        <span><span class="platform-dot"></span>Official Twitter / X</span>
+        <span>&#9733;</span>
+      </p>
+      <div class="adoption-img-wrap">
+        <span class="adoption-verified" aria-hidden="true">VERIFIED &#10003;</span>
+        <img class="adoption-img"
+             src="./Assets/potus-x.jpg"
+             alt="President Donald J. Trump POTUS X profile showing the America is Back banner"
+             loading="lazy"
+             width="1199" height="947">
+      </div>
+      <div class="adoption-profile">
+        <span class="adoption-avatar x-avatar" aria-hidden="true">&#120143;</span>
+        <div class="adoption-profile-text">
+          <span class="adoption-profile-name">
+            President Donald J. Trump
+            <span class="adoption-check" aria-label="Verified">&#10003;</span>
+          </span>
+          <span class="adoption-handle">@POTUS</span>
+          <span class="adoption-bio">45th &amp; 47th President of the United States. The Golden Age of America Begins Right Now.</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="adoption-anchor reveal" aria-hidden="true">&#9733; AMERICA IS BACK &#9733;</div>
+</section>
+
+<!-- ============ FLAG-LINE DIVIDER — bridges adoption → trailer ============ -->
+<div class="flag-divider" aria-hidden="true">
+  <div class="flag-divider-stripes"></div>
+</div>
+
+<!-- ============ TRAILER SECTION — BROADCAST 01 / PRESIDENTIAL ADDRESS ============ -->
+<section class="trailer-section" id="trailer" aria-label="$AMERICA — Broadcast 01: Presidential Address">
+
+  <!-- TOP STRIP: slate (left) + LIVE indicator (right) -->
+  <div class="broadcast-top-strip">
+    <div class="broadcast-slate" role="presentation">
+      <span class="slate-no">BROADCAST 01</span>
+      <span class="slate-divider" aria-hidden="true"></span>
+      <span class="slate-meta">Presidential Address &middot; Apr 2025</span>
+    </div>
+    <span class="broadcast-top-live" aria-hidden="true">
+      <span class="top-live-dot"></span>Live
+    </span>
+  </div>
+
+  <!-- TWO-COLUMN GRID: type LEFT, video RIGHT -->
+  <div class="broadcast-grid">
+
+    <!-- LEFT — bold stenciled headline + red bar + pill -->
+    <div class="broadcast-left">
+      <p class="broadcast-kicker reveal">
+        <span class="kicker-star">&#9733;</span> The Address
+      </p>
+      <h2 class="trailer-heading reveal">
+        <span class="ln">The Hat</span>
+        <span class="ln">Stays On<span class="red-dot">.</span></span>
+      </h2>
+      <p class="trailer-subtag reveal delay-1">Signed, sealed, and unstoppable.</p>
+      <div class="broadcast-redbar reveal delay-1">Trump Declares America Is Great Again!</div>
+      <span class="broadcast-pill reveal delay-2">&#9733; We Did It!</span>
+    </div>
+
+    <!-- RIGHT — vertical 9/16 video frame -->
+    <div class="broadcast-right">
+      <div class="broadcast-monitor reveal">
+        <span class="on-air-plate" aria-hidden="true">
+          <span class="on-air-dot"></span>On Air
+        </span>
+        <div class="trailer-frame">
+          <span class="corner-star tl" aria-hidden="true">&#9733;</span>
+          <span class="corner-star tr" aria-hidden="true">&#9733;</span>
+          <span class="corner-star bl" aria-hidden="true">&#9733;</span>
+          <span class="corner-star br" aria-hidden="true">&#9733;</span>
+          <video
+            class="trailer-video"
+            src="./Assets/trailer-short.mp4"
+            autoplay muted loop playsinline
+            preload="metadata"
+            poster="./Assets/trump-vertical.jpg"
+            aria-label="$AMERICA — Presidential Address Broadcast"></video>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 3 INFO CARDS ROW -->
+  <div class="broadcast-info-cards">
+    <div class="broadcast-info-card reveal">
+      <h4>&#9733; A Historic Moment</h4>
+      <p>Witness leadership in action.</p>
+    </div>
+    <div class="broadcast-info-card reveal delay-1">
+      <h4>&#9733; Our Nation. Stronger.</h4>
+      <p>Promises made. Promises kept.</p>
+    </div>
+    <div class="broadcast-info-card reveal delay-2">
+      <h4>&#9733; The Hat Is Here To Stay.</h4>
+      <p>The future is American.</p>
+    </div>
+  </div>
+
+  <!-- CTA: WATCH THE ADDRESS LIVE -->
+  <div class="broadcast-cta-wrap reveal">
+    <button class="broadcast-cta magnetic" type="button" id="broadcastWatchCta" aria-label="Watch the address live — scroll to the video and play with sound">
+      &#9733; Watch The Address Live &rarr;
+    </button>
+  </div>
+
+</section>
+
+<!-- ============ DIVIDER MARQUEE ============ -->
+<div class="divider" aria-hidden="true">
+  <div class="divider-track">
+    <span>Stronger.</span><span class="r">Bolder.</span><span class="g">Winning Again.</span><span class="star">★</span>
+    <span>Stronger.</span><span class="r">Bolder.</span><span class="g">Winning Again.</span><span class="star">★</span>
+    <span>Stronger.</span><span class="r">Bolder.</span><span class="g">Winning Again.</span><span class="star">★</span>
+    <span>Stronger.</span><span class="r">Bolder.</span><span class="g">Winning Again.</span><span class="star">★</span>
+  </div>
+</div>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="poster" id="manifesto">
+  <span class="poster-no">POSTER № 02 / MANIFESTO</span>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-eyebrow red">★ The Manifesto</span>
+      <h2 class="section-h">A New Slogan. <span class="red ghost">A New Era.</span></h2>
+    </div>
+
+    <div class="manifesto-grid">
+      <div class="manifesto-body reveal delay-1">
+        <p class="pullquote">"America Is Back."</p>
+        <p>The new MAGA slogan is <strong>"AMERICA IS BACK."</strong></p>
+        <p>Thousands of events will spring up around this powerful new slogan as it spreads rapidly across the globe, amplified by President Trump and his millions of supporters.</p>
+        <p>We've selected the ticker <strong>$AMERICA</strong> because it is stronger, bolder, and encompasses everything it means to be American.</p>
+        <p>Welcome to a new era. <strong>AMERICA IS BACK</strong> &#x1F1FA;&#x1F1F8;</p>
+
+        <div class="manifesto-secondary">
+          <div class="mini-img eagle">
+            <span class="mini-cap">★ For The People</span>
+          </div>
+          <div class="mini-img i1">
+            <span class="mini-cap">★ The Folder</span>
+          </div>
+        </div>
+      </div>
+      <figure class="manifesto-img reveal delay-2" aria-label="Gold pen on the AMERICA IS BACK presidential folder">
+        <span class="tag">★ Signed &amp; Sealed</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HEADLINE MOMENT — full-bleed cinematic ============ -->
+<section class="headline-moment" id="headline-moment" aria-label="A New Era">
+  <div class="headline-moment-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="pull reveal">
+      A New <em>Era.</em> A New <span class="red-word">Slogan.</span> One <em>Hat.</em>
+    </p>
+    <span class="credit">★ Issued by the People · No. 003 / Doctrine ★</span>
+  </div>
+</section>
+
+<!-- ============ LIVE CHART ============ -->
+<section class="poster" id="chart">
+  <span class="poster-no">POSTER № 04 / TAPE</span>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-eyebrow">★ Live Chart</span>
+      <h2 class="section-h"><span class="red">Watch</span> The <span class="navy">Tape.</span></h2>
+    </div>
+
+    <div class="chart-shell reveal delay-1">
+      <div class="chart-banner">
+        <span><span class="live-dot"></span>Live · Dexscreener · Solana</span>
+        <a href="https://dexscreener.com/solana/e9pq8h8cn2ck3uzxsq6lhkwgbyaanlgah4ywcznqdu3f" target="_blank" rel="noopener" style="color:var(--white);text-decoration:underline;text-underline-offset:3px;">Open Full Chart →</a>
+      </div>
+      <div id="dexscreener-embed"><iframe loading="lazy" src="https://dexscreener.com/solana/E9Pq8h8CN2cK3uZxsQ6LhkwGbyaAnLgAh4YwczNqdU3f?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO BUY ============ -->
+<section class="poster" id="buy">
+  <span class="poster-no">POSTER № 05 / INSTRUCTIONS</span>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-eyebrow red">★ How To Buy</span>
+      <h2 class="section-h">Four <span class="red ghost">Steps.</span> One <span class="gold">Hat.</span></h2>
+    </div>
+
+    <div class="buy-grid">
+      <figure class="buy-img reveal delay-1" aria-label="The Hat Stays On.">
+        <div class="buy-inset" aria-hidden="true"></div>
+        <div class="hat-cap">"The Hat <em>Stays On.</em>"</div>
+      </figure>
+
+      <ol class="steps reveal delay-2">
+        <li class="step">
+          <div class="num">01</div>
+          <div>
+            <h3>Get a Solana Wallet</h3>
+            <p>Install <a href="https://phantom.app" target="_blank" rel="noopener">Phantom</a> on mobile or as a browser extension. Save your seed phrase somewhere a flood, fire, or fed can't reach.</p>
+          </div>
+        </li>
+        <li class="step">
+          <div class="num">02</div>
+          <div>
+            <h3>Fund It With SOL</h3>
+            <p>Send SOL from an exchange (Coinbase, Kraken, Binance) directly to your wallet's Solana address. A small amount covers fees with room to spare.</p>
+          </div>
+        </li>
+        <li class="step">
+          <div class="num">03</div>
+          <div>
+            <h3>Open The Buy Link</h3>
+            <p>Go to <a href="https://pump.fun/coin/AVA8YuCsD2YgUSpdv3Hb2cjpdf8XAhGwyXmchxwopump" target="_blank" rel="noopener">pump.fun/$AMERICA</a> or swap directly on <a href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=AVA8YuCsD2YgUSpdv3Hb2cjpdf8XAhGwyXmchxwopump" target="_blank" rel="noopener">Jupiter</a>. Connect Phantom when prompted.</p>
+          </div>
+        </li>
+        <li class="step">
+          <div class="num">04</div>
+          <div>
+            <h3>Swap For $AMERICA</h3>
+            <p>Choose the SOL amount, confirm the trade, sign in your wallet. Hat on. Welcome to the comeback.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOCIALS ============ -->
+<section class="poster" id="join">
+  <span class="poster-no">POSTER № 07 / RALLY POINTS</span>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-eyebrow navy">★ Join The Movement</span>
+      <h2 class="section-h">Two <span class="red ghost">Channels.</span> No <span class="navy">Decoys.</span></h2>
+    </div>
+
+    <div class="socials">
+      <a class="soc magnetic reveal" href="https://x.com/AMERICAISBACK_1" target="_blank" rel="noopener">
+        <div class="soc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.18l-4.84-6.32L5.4 22H2.64l6.98-7.98L2 2h6.32l4.38 5.79L18.244 2Zm-1.08 18h1.71L7.92 4H6.1l11.064 16Z"/></svg>
+        </div>
+        <div>
+          <h4>Follow on X</h4>
+          <p>@AMERICAISBACK_1</p>
+        </div>
+      </a>
+
+      <a class="soc magnetic reveal delay-1" href="https://t.me/americasolana" target="_blank" rel="noopener">
+        <div class="soc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9.78 16.27 9.6 19.9c.36 0 .51-.15.7-.33l1.68-1.6 3.48 2.55c.64.35 1.1.17 1.27-.59l2.3-10.79c.22-1-.36-1.39-.98-1.16L3.6 13.3c-.97.38-.95.92-.16 1.16l4.5 1.4 10.45-6.59c.49-.33.94-.15.57.18L9.78 16.27Z"/></svg>
+        </div>
+        <div>
+          <h4>Join Telegram</h4>
+          <p>t.me/americasolana</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFICIAL DECLARATION (declaration.mp4) ============ -->
+<section class="declaration-section" id="declaration" aria-label="Official Declaration — President Trump declares the era">
+  <span class="declaration-bar-top" aria-hidden="true"></span>
+  <span class="declaration-bar-bottom" aria-hidden="true"></span>
+
+  <!-- Confetti drift — 16 particles in red / white / navy / gold -->
+  <div class="declaration-confetti" aria-hidden="true">
+    <span class="c-red"></span><span class="c-white"></span><span class="c-navy"></span><span class="c-gold"></span>
+    <span class="c-red"></span><span class="c-white"></span><span class="c-navy"></span><span class="c-gold"></span>
+    <span class="c-red"></span><span class="c-white"></span><span class="c-navy"></span><span class="c-gold"></span>
+    <span class="c-red"></span><span class="c-white"></span><span class="c-navy"></span><span class="c-gold"></span>
+  </div>
+
+  <div class="wrap">
+    <div class="declaration-grid">
+
+      <!-- LEFT — 9:16 video card with ornate frame + tap-to-play overlay -->
+      <div class="declaration-left">
+        <div class="declaration-card reveal" id="declarationCard">
+          <span class="dc-corner tl" aria-hidden="true">&#9733;</span>
+          <span class="dc-corner tr" aria-hidden="true">&#9733;</span>
+          <span class="dc-corner bl" aria-hidden="true">&#9733;</span>
+          <span class="dc-corner br" aria-hidden="true">&#9733;</span>
+          <video
+            id="declarationVideo"
+            class="declaration-video"
+            controls
+            muted
+            playsinline
+            preload="metadata"
+            poster="./Assets/banner.jpg"
+            aria-label="President Trump declares: America is back">
+            <source src="./Assets/declaration.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <button class="dc-unmute declaration-overlay" type="button" id="declarationUnmute" aria-label="Tap to play with sound">
+            <span class="dc-play" aria-hidden="true">&#9654;</span>
+            <span class="dc-play-label">Tap to play with sound</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT — eyebrow plate / heading / italic deck / CTA -->
+      <div class="declaration-right">
+        <span class="declaration-eyebrow reveal">★ Official Declaration</span>
+        <h2 class="declaration-h reveal delay-1">AMERICA IS BACK <span class="dh-em">&mdash;</span> Donald Trump</h2>
+        <p class="declaration-sub reveal delay-2">President Trump declares the era — sixteen seconds, signed and sealed.</p>
+        <a class="declaration-cta magnetic reveal delay-2" href="#trailer" aria-label="Watch the full address — scroll to the broadcast section">
+          &#9733; Watch The Full Address &rarr;
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER STRIP (banner.jpg) ============ -->
+<div class="footer-strip" aria-hidden="true"></div>
+
+<!-- ============ FOOTER ============ -->
+<footer id="footer">
+  <div class="wrap">
+
+    <h2 class="foot-mark reveal">
+      <span class="ghost">America</span> <span class="red">Is</span> <span class="gold">Back.</span>
+    </h2>
+
+    <div class="foot-row">
+      <div class="ca-block reveal delay-1">
+        <div class="ca-label">
+          <span class="lbl">Contract Address — copyable</span>
+          <span class="net">Solana · SPL</span>
+        </div>
+        <div class="ca-row">
+          <div class="ca-text">AVA8YuCsD2YgUSpdv3Hb2cjpdf8XAhGwyXmchxwopump</div>
+          <button class="copy-btn" data-copy="AVA8YuCsD2YgUSpdv3Hb2cjpdf8XAhGwyXmchxwopump" aria-label="Copy contract address">
+            Copy
+            <span class="stamp" aria-hidden="true">Copied</span>
+            <span class="confetti-host" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <p class="disclaimer reveal delay-2">
+        Not financial advice. $AMERICA is a memecoin — buy responsibly. No promises of returns, no roadmap of riches. The chart is the only honest metric on this page.
+      </p>
+    </div>
+
+    <div class="legal">
+      <span>$AMERICA · Solana</span>
+      <span>Pair · E9Pq…dU3f</span>
+      <span>★ The Hat Stays On ★</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ JS ============ -->
+<script>
+(function(){
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hoverDevice = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  /* ====================================================================
+     SOUND SYSTEM — Web Audio API, off by default, user-toggleable
+     ==================================================================== */
+  let audioCtx = null;
+  let soundOn = true; // default ON
+  try{
+    const stored = localStorage.getItem('america_sound_on');
+    if(stored !== null) soundOn = stored === '1'; // honor explicit user choice if set
+  }catch(_){}
+
+  // First user interaction unlocks AudioContext (browser autoplay policy).
+  // We listen on the most reliable gestures (scroll alone is NOT a guaranteed unlock,
+  // so we cover scroll, touch, click, keydown, pointerdown — first one wins).
+  let audioUnlocked = false;
+  function unlockAudio(){
+    if(audioUnlocked) return;
+    audioUnlocked = true;
+    const ctx = ensureCtx();
+    if(ctx && ctx.state === 'suspended'){ try{ ctx.resume(); }catch(_){} }
+    // Friendly arrival blip so users know sound is live (if ON).
+    if(soundOn){ try{ tone(660, 0.07, 'square', 0.03); }catch(_){} }
+    ['scroll','touchstart','click','keydown','pointerdown','wheel'].forEach(ev=>{
+      window.removeEventListener(ev, unlockAudio, {passive:true});
+    });
+  }
+  ['scroll','touchstart','click','keydown','pointerdown','wheel'].forEach(ev=>{
+    window.addEventListener(ev, unlockAudio, {passive:true, once:false});
+  });
+
+  function ensureCtx(){
+    if(!audioCtx){
+      try{
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }catch(_){}
+    }
+    if(audioCtx && audioCtx.state === 'suspended'){
+      try{ audioCtx.resume(); }catch(_){}
+    }
+    return audioCtx;
+  }
+
+  function tone(freq, dur, type, gain){
+    if(!soundOn) return;
+    const ctx = ensureCtx(); if(!ctx) return;
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.type = type || 'square';
+    o.frequency.setValueAtTime(freq, ctx.currentTime);
+    g.gain.setValueAtTime(0, ctx.currentTime);
+    g.gain.linearRampToValueAtTime(gain || 0.04, ctx.currentTime + 0.005);
+    g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + (dur||0.08));
+    o.connect(g); g.connect(ctx.destination);
+    o.start();
+    o.stop(ctx.currentTime + (dur||0.08) + 0.02);
+  }
+
+  function sweep(f1, f2, dur, type, gain){
+    if(!soundOn) return;
+    const ctx = ensureCtx(); if(!ctx) return;
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.type = type || 'triangle';
+    o.frequency.setValueAtTime(f1, ctx.currentTime);
+    o.frequency.linearRampToValueAtTime(f2, ctx.currentTime + (dur||0.06));
+    g.gain.setValueAtTime(0, ctx.currentTime);
+    g.gain.linearRampToValueAtTime(gain || 0.02, ctx.currentTime + 0.005);
+    g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + (dur||0.06));
+    o.connect(g); g.connect(ctx.destination);
+    o.start();
+    o.stop(ctx.currentTime + (dur||0.06) + 0.02);
+  }
+
+  function chimeArp(){
+    if(!soundOn) return;
+    const notes = [523.25, 659.25, 783.99]; // C5 E5 G5
+    notes.forEach((f,i)=>{
+      setTimeout(()=>tone(f, 0.18, 'sine', 0.05), i*70);
+    });
+  }
+
+  // sound toggle UI
+  const soundToggle = document.getElementById('soundToggle');
+  const soundIcon = document.getElementById('soundIcon');
+  function updateSoundUI(){
+    if(soundOn){
+      soundIcon.textContent = 'ON';
+      soundToggle.setAttribute('aria-pressed','true');
+      soundToggle.style.background = 'var(--red)';
+      soundToggle.style.color = 'var(--white)';
+      soundToggle.style.borderColor = 'var(--gold)';
+    } else {
+      soundIcon.textContent = 'OFF';
+      soundToggle.setAttribute('aria-pressed','false');
+      soundToggle.style.background = 'var(--ink)';
+      soundToggle.style.color = 'var(--gold)';
+      soundToggle.style.borderColor = 'var(--gold)';
+    }
+  }
+  updateSoundUI();
+  soundToggle.addEventListener('click', () => {
+    soundOn = !soundOn;
+    try{ localStorage.setItem('america_sound_on', soundOn ? '1':'0'); }catch(_){}
+    updateSoundUI();
+    if(soundOn){
+      ensureCtx();
+      // confirm chime
+      tone(660, 0.08, 'square', 0.05);
+    }
+  });
+
+  // throttled hover sweeps
+  let lastHover = 0;
+  function hoverSound(){
+    const now = performance.now();
+    if(now - lastHover < 110) return;
+    lastHover = now;
+    sweep(800, 1200, 0.06, 'triangle', 0.02);
+  }
+  // attach hover sound to all CTA-ish elements
+  document.querySelectorAll('.btn, .soc, .copy-btn, .sound-toggle').forEach(el => {
+    el.addEventListener('mouseenter', hoverSound);
+  });
+  // attach click tap to all CTA elements
+  document.querySelectorAll('.btn, .soc').forEach(el => {
+    el.addEventListener('click', ()=> tone(440, 0.08, 'square', 0.04));
+  });
+
+  /* ====================================================================
+     COPY CA + RUBBER STAMP + CONFETTI BURST + CHIME
+     ==================================================================== */
+  const copyBtns = document.querySelectorAll('.copy-btn');
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      const txt = btn.getAttribute('data-copy');
+      const stamp = btn.querySelector('.stamp');
+      const host = btn.querySelector('.confetti-host');
+      try{
+        await navigator.clipboard.writeText(txt);
+      }catch(_){
+        const ta = document.createElement('textarea');
+        ta.value = txt;
+        ta.style.position='fixed';ta.style.opacity='0';
+        document.body.appendChild(ta);
+        ta.select();
+        try{document.execCommand('copy');}catch(__){}
+        document.body.removeChild(ta);
+      }
+      if(stamp){
+        const angle = -8 - Math.floor(Math.random()*10);
+        stamp.style.setProperty('transform', `translateX(-50%) rotate(${angle}deg) scale(1)`);
+        stamp.classList.add('show');
+        clearTimeout(btn._t);
+        btn._t = setTimeout(()=>{
+          stamp.classList.remove('show');
+          stamp.style.transform = '';
+        }, 1400);
+      }
+      // confetti burst
+      if(host && !reduced){
+        const colors = ['r','b','g','w'];
+        const N = 14;
+        for(let i=0;i<N;i++){
+          const bit = document.createElement('span');
+          bit.className = 'confetti-bit ' + colors[i % colors.length];
+          host.appendChild(bit);
+          const angle = (Math.PI * 2 * i / N) + (Math.random()*0.4-0.2);
+          const dist = 60 + Math.random()*60;
+          const dx = Math.cos(angle)*dist;
+          const dy = Math.sin(angle)*dist - 20;
+          const rot = (Math.random()*720 - 360);
+          bit.animate([
+            {transform:'translate(-50%,-50%) rotate(0deg) scale(.4)', opacity:1},
+            {transform:`translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px)) rotate(${rot}deg) scale(1)`, opacity:0}
+          ],{
+            duration: 700 + Math.random()*200,
+            easing:'cubic-bezier(.18,.7,.3,1)'
+          });
+          setTimeout(()=>bit.remove(), 950);
+        }
+      }
+      // chime
+      chimeArp();
+      // tap
+      tone(880, 0.06, 'square', 0.04);
+    });
+  });
+
+  /* ====================================================================
+     SCROLL PROGRESS
+     ==================================================================== */
+  const sp = document.getElementById('scrollProgress');
+  function updateProgress(){
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    sp.style.width = pct + '%';
+  }
+  let progressTick = false;
+  window.addEventListener('scroll', () => {
+    if(!progressTick){
+      requestAnimationFrame(()=>{ updateProgress(); progressTick=false; });
+      progressTick = true;
+    }
+  }, {passive:true});
+  updateProgress();
+
+  /* ====================================================================
+     INTERSECTION OBSERVER — reveal + letter stagger
+     ==================================================================== */
+  // expand letter-stagger headlines BEFORE observation
+  document.querySelectorAll('[data-stagger]').forEach(el => {
+    const text = el.getAttribute('data-stagger') || el.textContent;
+    el.textContent = '';
+    Array.from(text).forEach((ch, i) => {
+      const span = document.createElement('span');
+      span.className = 'stagger-letter';
+      span.style.transitionDelay = (i*30) + 'ms';
+      span.textContent = ch === ' ' ? ' ' : ch;
+      el.appendChild(span);
+    });
+  });
+
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {root:null, rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // letter stagger observer (separate, faster trigger)
+    const lo = new IntersectionObserver((entries)=>{
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.querySelectorAll('.stagger-letter').forEach(s => s.classList.add('in'));
+          lo.unobserve(entry.target);
+        }
+      });
+    }, {root:null, rootMargin:'0px 0px -10% 0px', threshold:0.1});
+    document.querySelectorAll('[data-stagger]').forEach(el => lo.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    document.querySelectorAll('.stagger-letter').forEach(el => el.classList.add('in'));
+  }
+
+  // also trigger letter stagger on initial load for hero (above the fold)
+  setTimeout(()=>{
+    document.querySelectorAll('.hero [data-stagger] .stagger-letter').forEach(s => s.classList.add('in'));
+  }, 80);
+
+  /* ====================================================================
+     PARALLAX HERO BG
+     ==================================================================== */
+  const heroBg = document.getElementById('heroBg');
+  if(heroBg && !reduced){
+    let parTick = false;
+    function par(){
+      const y = window.scrollY;
+      heroBg.style.transform = `translate3d(0, ${y * 0.25}px, 0)`;
+      parTick = false;
+    }
+    window.addEventListener('scroll', () => {
+      if(!parTick){ requestAnimationFrame(par); parTick = true; }
+    }, {passive:true});
+  }
+
+  /* ====================================================================
+     CUSTOM CURSOR (desktop only)
+     ==================================================================== */
+  if(hoverDevice){
+    document.body.classList.add('has-custom-cursor');
+    const cur = document.createElement('div');
+    cur.className = 'custom-cursor';
+    document.body.appendChild(cur);
+    let mx = window.innerWidth/2, my = window.innerHeight/2;
+    let cx = mx, cy = my;
+    window.addEventListener('mousemove', (e) => {
+      mx = e.clientX; my = e.clientY;
+    }, {passive:true});
+    function tickCur(){
+      cx += (mx - cx) * 0.32;
+      cy += (my - cy) * 0.32;
+      cur.style.transform = `translate(${cx}px, ${cy}px) translate(-50%,-50%)`;
+      requestAnimationFrame(tickCur);
+    }
+    tickCur();
+    document.querySelectorAll('a, button, .btn, .soc, .copy-btn, .tok-card, .sound-toggle').forEach(el => {
+      el.addEventListener('mouseenter', () => cur.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cur.classList.remove('hover'));
+    });
+    window.addEventListener('mousedown', () => cur.classList.add('click'));
+    window.addEventListener('mouseup', () => cur.classList.remove('click'));
+  }
+
+  /* ====================================================================
+     MAGNETIC CTAs (desktop only)
+     ==================================================================== */
+  if(hoverDevice && !reduced){
+    document.querySelectorAll('.magnetic').forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        const x = e.clientX - (r.left + r.width/2);
+        const y = e.clientY - (r.top + r.height/2);
+        const dist = Math.hypot(x,y);
+        const max = 80;
+        if(dist < max + Math.max(r.width, r.height)/2){
+          const pull = 0.25;
+          el.style.transform = `translate(${x * pull}px, ${y * pull}px)`;
+        } else {
+          el.style.transform = '';
+        }
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = '';
+      });
+    });
+  }
+
+  /* ====================================================================
+     TILT CARDS (tokenomics)
+     ==================================================================== */
+  if(hoverDevice && !reduced){
+    document.querySelectorAll('.tilt').forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        const rx = (-y * 6).toFixed(2);
+        const ry = (x * 6).toFixed(2);
+        el.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(0)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = '';
+      });
+    });
+  }
+
+  /* ====================================================================
+     CUSTOM TRAILER PLAYER — clean ink+gold+white
+     ==================================================================== */
+  function setupTrailerPlayer(video){
+    const frame = video.closest('.trailer-frame');
+    if(!frame) return;
+    // strip native controls just in case
+    video.removeAttribute('controls');
+
+    // chyron timestamp (lives outside the frame, in the broadcast monitor wrapper)
+    const monitor = video.closest('.broadcast-monitor');
+    const chyronTime = monitor ? monitor.querySelector('[data-chyron-time]') : null;
+
+    // Inline SVG icons — currentColor fill so they stay strictly ink/white.
+    const ICON = {
+      play:  '<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M7 5l12 7-12 7z"/></svg>',
+      pause: '<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><rect x="6" y="5" width="4" height="14" fill="currentColor"/><rect x="14" y="5" width="4" height="14" fill="currentColor"/></svg>',
+      sound: '<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg>',
+      muted: '<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3z"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 9l5 6M21 9l-5 6"/></svg>',
+      fs:    '<svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>'
+    };
+
+    const bar = document.createElement('div');
+    bar.className = 'tv-bar';
+    bar.innerHTML = `
+      <button class="tv-btn tv-play" type="button" aria-label="Play"><span class="tv-icon">${ICON.play}</span></button>
+      <button class="tv-btn tv-mute" type="button" aria-label="Mute toggle"><span class="tv-icon">${ICON.muted}</span></button>
+      <div class="tv-progress" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="tv-progress-track">
+          <div class="tv-progress-fill"></div>
+          <div class="tv-progress-knob"></div>
+        </div>
+      </div>
+      <span class="tv-time" aria-live="off">0:00 / 0:00</span>
+      <button class="tv-btn tv-fs" type="button" aria-label="Fullscreen"><span class="tv-icon">${ICON.fs}</span></button>
+    `;
+    frame.appendChild(bar);
+
+    const playBtn = bar.querySelector('.tv-play');
+    const playIcon = playBtn.querySelector('.tv-icon');
+    const muteBtn = bar.querySelector('.tv-mute');
+    const muteIcon = muteBtn.querySelector('.tv-icon');
+    const progress = bar.querySelector('.tv-progress');
+    const fill = bar.querySelector('.tv-progress-fill');
+    const knob = bar.querySelector('.tv-progress-knob');
+    const time = bar.querySelector('.tv-time');
+    const fsBtn = bar.querySelector('.tv-fs');
+
+    function fmt(t){
+      if(!isFinite(t) || t < 0) t = 0;
+      const m = Math.floor(t / 60);
+      const s = Math.floor(t % 60);
+      return m + ':' + (s < 10 ? '0' + s : s);
+    }
+    function refreshPlayIcon(){
+      playIcon.innerHTML = video.paused ? ICON.play : ICON.pause;
+      playBtn.setAttribute('aria-label', video.paused ? 'Play' : 'Pause');
+    }
+    function refreshMuteIcon(){
+      muteIcon.innerHTML = video.muted || video.volume === 0 ? ICON.muted : ICON.sound;
+      muteBtn.setAttribute('aria-label', video.muted ? 'Unmute' : 'Mute');
+    }
+
+    // play / pause — SOUND ON PLAY (broadcast tunes in with sound)
+    playBtn.addEventListener('click', () => {
+      if(video.paused){
+        video.muted = false;          // user gesture → unmute is browser-policy-safe
+        video.play().catch(()=>{});
+      } else {
+        video.pause();
+      }
+      refreshPlayIcon();
+      refreshMuteIcon();
+    });
+    // tap on video itself toggles play (also unmutes on play)
+    video.addEventListener('click', () => {
+      if(video.paused){
+        video.muted = false;
+        video.play().catch(()=>{});
+      } else {
+        video.pause();
+      }
+      refreshPlayIcon();
+      refreshMuteIcon();
+    });
+    video.addEventListener('play', refreshPlayIcon);
+    video.addEventListener('pause', refreshPlayIcon);
+
+    // mute
+    muteBtn.addEventListener('click', () => {
+      video.muted = !video.muted;
+      refreshMuteIcon();
+    });
+    video.addEventListener('volumechange', refreshMuteIcon);
+
+    // progress + time loop via rAF
+    let rafId = null;
+    function tick(){
+      if(!isDragging){
+        const dur = video.duration || 0;
+        const pct = dur > 0 ? (video.currentTime / dur) * 100 : 0;
+        fill.style.width = pct + '%';
+        knob.style.left = pct + '%';
+        progress.setAttribute('aria-valuenow', String(Math.round(pct)));
+      }
+      const stamp = fmt(video.currentTime) + ' / ' + fmt(video.duration);
+      time.textContent = stamp;
+      if(chyronTime) chyronTime.textContent = stamp;
+      rafId = requestAnimationFrame(tick);
+    }
+    rafId = requestAnimationFrame(tick);
+
+    // seek (click + drag, pointer events)
+    let isDragging = false;
+    function seekFromEvent(ev){
+      const rect = progress.getBoundingClientRect();
+      const x = Math.max(0, Math.min(rect.width, ev.clientX - rect.left));
+      const pct = rect.width > 0 ? x / rect.width : 0;
+      const dur = video.duration || 0;
+      if(dur > 0){
+        video.currentTime = pct * dur;
+        fill.style.width = (pct * 100) + '%';
+        knob.style.left = (pct * 100) + '%';
+      }
+    }
+    progress.addEventListener('pointerdown', (ev) => {
+      isDragging = true;
+      progress.classList.add('tv-drag');
+      progress.setPointerCapture(ev.pointerId);
+      seekFromEvent(ev);
+    });
+    progress.addEventListener('pointermove', (ev) => {
+      if(isDragging) seekFromEvent(ev);
+    });
+    function endDrag(ev){
+      if(!isDragging) return;
+      isDragging = false;
+      progress.classList.remove('tv-drag');
+      try{ progress.releasePointerCapture(ev.pointerId); }catch(_){}
+    }
+    progress.addEventListener('pointerup', endDrag);
+    progress.addEventListener('pointercancel', endDrag);
+
+    // keyboard seek + space
+    progress.addEventListener('keydown', (ev) => {
+      const dur = video.duration || 0;
+      if(ev.key === 'ArrowLeft'){
+        ev.preventDefault();
+        video.currentTime = Math.max(0, video.currentTime - 5);
+      } else if(ev.key === 'ArrowRight'){
+        ev.preventDefault();
+        video.currentTime = Math.min(dur, video.currentTime + 5);
+      } else if(ev.key === ' ' || ev.key === 'Enter'){
+        ev.preventDefault();
+        if(video.paused) video.play().catch(()=>{}); else video.pause();
+      }
+    });
+
+    // fullscreen toggle
+    fsBtn.addEventListener('click', () => {
+      const doc = document;
+      if(doc.fullscreenElement || doc.webkitFullscreenElement){
+        (doc.exitFullscreen || doc.webkitExitFullscreen || function(){}).call(doc);
+      } else {
+        const target = frame;
+        const req = target.requestFullscreen || target.webkitRequestFullscreen || target.webkitEnterFullscreen;
+        if(req) req.call(target).catch(()=>{});
+      }
+    });
+
+    // make sure bar visible on focus-within (keyboard)
+    bar.addEventListener('focusin', () => frame.classList.add('tv-show'));
+    bar.addEventListener('focusout', () => frame.classList.remove('tv-show'));
+
+    // initialize icon states
+    refreshPlayIcon();
+    refreshMuteIcon();
+  }
+  document.querySelectorAll('.trailer-video').forEach(setupTrailerPlayer);
+
+  /* ====================================================================
+     HERO BG VIDEO — fade in once playable
+     ==================================================================== */
+  (function(){
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const small = window.matchMedia && window.matchMedia('(max-width: 700px)').matches;
+    function wire(v, isMobile){
+      if(!v) return;
+      const wrongViewport = isMobile ? !small : small;
+      if(reduce || wrongViewport){
+        try{ v.pause(); }catch(_){};
+        v.removeAttribute('autoplay');
+        return;
+      }
+      let revealed = false;
+      function reveal(){
+        if(revealed) return;
+        revealed = true;
+        v.classList.add('is-loaded');
+      }
+      if(v.readyState >= 3){ reveal(); }
+      v.addEventListener('canplay', reveal, {once:true});
+      v.addEventListener('loadeddata', reveal, {once:true});
+      setTimeout(reveal, 4000); // safety: never stuck on poster
+    }
+    wire(document.getElementById('heroBgVideo'), false);
+    wire(document.getElementById('heroBgVideoMobile'), true);
+  })();
+
+  /* ====================================================================
+     "WATCH THE ADDRESS LIVE" CTA — scroll to video frame and play with sound
+     ==================================================================== */
+  (function(){
+    const cta = document.getElementById('broadcastWatchCta');
+    if(!cta) return;
+    cta.addEventListener('click', () => {
+      const monitor = document.querySelector('.trailer-section .broadcast-monitor');
+      const video = document.querySelector('.trailer-section .trailer-video');
+      const frame = document.querySelector('.trailer-section .trailer-frame');
+      if(monitor){
+        try{ monitor.scrollIntoView({behavior:'smooth', block:'center'}); }catch(_){ monitor.scrollIntoView(); }
+      }
+      // Trigger sound-on-play via the existing tv-play button (consistent UX)
+      const playBtn = frame ? frame.querySelector('.tv-play') : null;
+      if(video){
+        // ensure unmute happens on user gesture
+        try{
+          video.muted = false;
+          video.play().catch(()=>{});
+        }catch(_){}
+      }
+      if(playBtn && video && video.paused){
+        // double-tap safety: also click play button to refresh icon state
+        try{ playBtn.click(); }catch(_){}
+      }
+    });
+  })();
+
+})();
+</script>
+
+<!-- ============ DECLARATION VIDEO — tap to play with sound ============ -->
+<script>
+(function(){
+  var v = document.querySelector('.declaration-video');
+  var overlay = document.querySelector('.declaration-overlay');
+  if(!v || !overlay) return;
+  var card = document.getElementById('declarationCard');
+  function hideOverlay(){
+    overlay.style.opacity = 0;
+    overlay.style.pointerEvents = 'none';
+    if(card) card.classList.add('is-playing');
+  }
+  function play(){
+    v.muted = false;
+    v.play().catch(function(){});
+    hideOverlay();
+  }
+  overlay.addEventListener('click', play);
+  v.addEventListener('play', hideOverlay);
+})();
+</script>
+
+</body>
+</html>
